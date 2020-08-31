@@ -1,0 +1,95 @@
+.button,
+button:not(.no-btn),
+input[type='reset'],
+input[type="submit"],
+input[type="button"] {
+    -webkit-appearance: none;
+    text-decoration: none;
+    background-color: $primary_color;
+    color: #ffffff;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    vertical-align: middle;
+    display: inline-block;
+    border: 1px solid transparent;
+    transition: all .3s ease-in-out;
+    text-transform: uppercase;
+    line-height: 1.750em;
+    padding: 8px 16px;
+    border-radius: 0;
+    font-size: .8rem;
+    &.gray {
+        background: $dark_gray;
+        &:hover {
+            background: #ffffff;
+            color: $dark_gray;
+            border-color: $dark_gray;
+        }
+    }
+    &:hover {
+        color: $primary_color;
+        border-color: $primary_color;
+        background: 0 0;
+    }
+    &.light-btn {
+        background-color: $gray;
+        color: $dark_gray;
+
+        &:hover {
+            border-color: transparent;
+            color: $gray;
+            background-color: $dark_gray;
+        }
+    }
+    &.secondary-border-btn{
+        border-color: $secondary_color;
+        color: $secondary_color;
+        background-color: #ffffff;
+        &:hover {
+            background-color: $secondary_color;
+            color: #ffffff;
+        }
+    }
+    &.secondary-btn {
+        border-color: $secondary_color;
+        background-color: $secondary_color;
+        &:hover {
+            color: $secondary_color;
+            background-color: #ffffff;
+        }
+    }
+    &.danger-btn{
+        border-color: $red;
+        background-color: $red;
+        &:hover{
+            color: #ffffff;
+        }
+    }
+}
+
+button{
+    &:focus {
+        outline: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+}
+
+input[type='reset'] {
+    background-color: $secondary_color;
+    &:hover {
+        color: $secondary_color;
+        border-color: $secondary_color;
+    }
+}
+
+.no-btn {
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    color: $primary_color;
+    font-weight: 600;
+    // font-family: $heading-font;
+}
+

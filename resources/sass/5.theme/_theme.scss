@@ -1,0 +1,57 @@
+body {
+    &.light {
+        background-color: #ffffff;
+        color: #3d3d44;
+        transition: background-color .3s ease-in-out;
+        .main-content-area {
+            background-color: #f8fafb;
+            border-left: 1px solid #ddd;
+        }
+    }
+    &.dark {
+        background-color: slategray;
+        // color: #ffffff;
+    }
+}
+
+
+
+
+/* theme switcher */
+
+.checkbox-group {
+    #switch-theme {
+        &:checked {
+            ~ {
+                .theme-switcher {
+                    &::before {
+                        left: auto;
+                        right: 1px;
+                        transition: all .3s ease-in-out;
+                        background-color: $secondary_color;
+                    }
+                }
+            }
+        }
+    }
+    .theme-switcher {
+        border-radius: 24px;
+        height: 1.5rem;
+        width: 3rem;
+        background-color: $primary_color;
+        cursor: pointer;
+        position: relative;
+        transition: all .3s ease-in-out;
+        &::before {
+            content: "";
+            position: absolute;
+            left: 1px;
+            top: 0;
+            background-color: #ffffff;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: inherit;
+            transition: all .3s ease-in-out;
+        }
+    }
+}

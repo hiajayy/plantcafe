@@ -1,0 +1,198 @@
+/* Labels and Legends */
+
+label {
+    display: block;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    label {
+        margin-bottom: .5rem;
+        cursor: pointer;
+    }
+    &>label{
+        font-size: .8rem;
+    }
+}
+
+
+/* One Line Inputs */
+
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+input[type="file"],
+textarea,
+select,
+.form-control {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    display: inline-block;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    padding: 5px 16px;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: $text_color;
+    // background-color: #fff;
+    background-color: transparent;
+    background-clip: padding-box;
+    border-radius: 0;
+    transition: all .3s ease-in-out;
+    min-height: auto;
+    height: auto;
+    border: none;
+    border: 1px solid $dark_gray;
+    &:focus {
+        outline: 0;
+        box-shadow: none;
+        border-color: $primary_color;
+        // background-color: transparentize($primary_light, .95);
+    }
+    &:disabled {
+        opacity: .5;
+    }
+}
+
+.select-wrapper {
+    position: relative;
+    &::before {
+        position: absolute;
+        right: 16px;
+        top: 13px;
+        @include font-awesome;
+        content: "\f078";
+        font-weight: 900;
+    }
+}
+
+/* custome radio button */
+.radio-group {
+    label[for] {
+        display: inline-block;
+        margin-right: 16px;
+        font-size: 1rem;
+    }
+    input[type='radio'] {
+        position: absolute;
+        width: 0;
+        height: 0;
+        &:checked {
+            ~ {
+                .radio-button {
+                    &::before {
+                        transform: scale(.6);
+                    }
+                }
+            }
+        }
+        &:disabled {
+            ~ {
+                .radio-button,
+                label[for] {
+                    opacity: .5;
+                }
+            }
+        }
+    }
+    .radio-button {
+        width: 1rem;
+        height: 1rem;
+        display: inline-block;
+        border: 3px solid $primary_color;
+        border-radius: 50%;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            background-color: $secondary_color;
+            transform: scale(0);
+            border-radius: 50%;
+            transition: all .1s ease-in-out;
+        }
+    }
+}
+
+.checkbox-group {
+    label[for] {
+        display: flex;
+        margin-right: 16px;
+        font-size: 1rem;
+    }
+    .checkbox-button {
+        border: 2px solid $primary_color;
+        // background-color: $blue;
+        display: inline-block;
+        width: 1rem;
+        height: 1rem;
+        position: relative;
+        border-radius: 4px;
+        &::after {
+            content: "";
+            position: absolute;
+            display: none;
+            left: 3px;
+            top: 0;
+            width: 6px;
+            height: 10px;
+            border: solid $secondary_color;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+            border-radius: 4px;
+            vertical-align: text-bottom;
+        }
+    }
+    input[type='checkbox'] {
+        position: absolute;
+        width: 0;
+        height: 0;
+        &:disabled {
+            ~ {
+                .checkbox-button,
+                label[for] {
+                    opacity: .5;
+                }
+            }
+        }
+        &:checked {
+            ~ {
+                .checkbox-button {
+                    &::after {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.newsletter-form{
+    max-width: 700px;
+    margin: auto;
+}
+
+/* login form wrapper */
+.user-form{
+    .modal-dialog{
+        max-width: 100%;
+    }
+}
+
+@media only screen and (min-width: 768px){}

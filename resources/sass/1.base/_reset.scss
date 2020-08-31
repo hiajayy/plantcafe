@@ -1,0 +1,117 @@
+.social-icons{
+    font-size: 0;
+    .list-inline-item {
+        margin-right: 0;
+        text-align: center;
+        a{
+            // line-height: 3rem;
+            display: block;
+            font-size: 1rem;
+            padding: 0.5rem .75rem;
+        }
+    }
+}
+
+.modal-content{
+    border-radius: 0;
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-left: 5px;
+    padding-left: 17px;
+    background-color: transparentize($text_color, .5);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 2000;
+    @include default-transition;
+    &.show{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.breadcrumb-wrapper {
+    &.style-1{
+        background-color: $gray;
+        padding: 10rem 0 3rem;
+        background-size: cover;
+        background-position: bottom;
+        // color: #ffffff;
+        position: relative;
+        font-family: $heading_font;
+
+        &::before {
+            @include bg-overlay;
+            background-image: radial-gradient(transparentize($secondary_color, .8), rgba(29, 29, 29, 0.1));
+            z-index: 0;
+        }
+
+        .breadcrumb {
+            background-color: transparent;
+            margin-bottom: 0;
+            // justify-content: center;
+            font-size: 1.5rem;
+            padding: 0;
+        }
+
+        .breadcrumb-item+.breadcrumb-item::before {
+            color: inherit;
+            content: ">";
+        }
+
+        .breadcrumb-item.active {
+            // color: $primary_light;
+            color: $primary_color;
+        }
+    }
+    &.style-2{
+        background-color: $gray;
+        .breadcrumb {
+            background-color: transparent;
+            margin-bottom: 0;
+        }
+    }
+}
+
+/* lightbox */
+.lightgallery{
+    margin-bottom: 0;
+    li{
+        display: inline-block;
+        vertical-align: top;
+        margin-bottom: 1rem;
+        margin-right: 1rem;
+        max-width: 80px;
+        cursor: pointer;
+    }
+}
+
+.media{
+    & > a{
+        margin-right: 1rem;
+    }
+    .button{
+        margin-right: 0;
+    }
+    .media-body{
+        @include element-mb-0;
+    }
+}
+
+.primary-text{
+    color: $primary_color;
+}
+.primary-light-text{
+    color: $primary_light;
+}
+.secondary-text{
+    color: $secondary_color;
+}
+.gray-text{
+    color: $dark_gray;
+}

@@ -1,0 +1,16 @@
+.question-box{
+    @include element-mb-0;
+    margin-bottom: 1rem;
+    h5{
+        &::before{
+            content: "Que. ";
+        }
+    }
+    p{
+        &:first-of-type{
+            &::before{
+                content: "Ans. ";
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+/* back to top */
+
+#back-to-top {
+    text-align: center;
+    line-height: 40px;
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    bottom: 68px;
+    background-color: $primary_light;
+    color: #ffffff;
+    // transition: all .3s ease-in-out;
+    z-index: 99;
+    opacity: .95;
+    right: -100%;
+    &:disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+    &:hover{
+        opacity: 1;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, .25);
+        // line-height: 30px;
+        &::before {
+            top: 12px;
+        }
+    }
+    &:active {
+        box-shadow: 0 5px 5px rgba(0, 0, 0, .25);
+    }
+}
