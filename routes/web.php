@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/', function () {
     return view('index');
 });
+Route::get('/test','HomeController@index');
 Route::get('/about', function () {
     return view('about');
 });
@@ -77,6 +78,14 @@ Route::get('/terms-and-conditions',function(){
 Route::get('/wishlist',function(){
     return view('wishlist');
 });
+Route::get('/add',function(){
+   
+
+   
+
+   
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

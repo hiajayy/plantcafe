@@ -9,6 +9,7 @@
 @section('breadcrumb')
 <nav aria-label="breadcrumb" class="breadcrumb-wrapper style-1">
     <div class="container">
+    <h2 class="title-page">Privacy Policy</h2>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/">Home</a></li>
             <li class="breadcrumb-item active" aria-current="page">Privacy Policy</li>
@@ -19,6 +20,7 @@
 @section('main')
   <section class="inner-wrapper">
             <div class="container ">
+            <h2 class="title-page">Privacy Policy</h2>
                 <div class="row ">
                     <div class="col-lg-12 ">
                         <h5>Privacy Policy</h5>

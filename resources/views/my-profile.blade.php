@@ -9,6 +9,7 @@
 @section('breadcrumb')
 <nav aria-label="breadcrumb" class="breadcrumb-wrapper style-1">
     <div class="container">
+    <h2 class="title-page">My Profile</h2>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/">Home</a></li>
             <li class="breadcrumb-item active" aria-current="page">My Profile</li>
@@ -113,7 +114,7 @@
                             </div>
                             <div class="col-md-6">
                                 <h5>Your new password must:</h5>
-                                <p class="mb-0">Be at least 4 characters in length</p>
+                                <p class="mb-0">Be at least 8 characters in length</p>
                                 <p class="mb-0">Not be same as your current password</p>
                                 <p class="mb-0">Not contain common passwords.</p>
                             </div>

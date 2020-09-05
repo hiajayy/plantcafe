@@ -7,12 +7,13 @@
 @endsection
 @section('breadcrumb')
 <nav aria-label="breadcrumb" class="breadcrumb-wrapper style-1">
-        <div class="container">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Address</li>
-            </ol>
-        </div>
+    <div class="container">
+    <h2 class="title-page">Address</h2>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Address</li>
+        </ol>
+    </div>
 </nav>
 @endsection
 @section('main')
@@ -23,6 +24,12 @@
                     <p class="mb-0 slide-btn"><a href="#" id="add-new-address" class="add add-new-address">Add New Address</a></p>
                     <form class="add-address-form pt-3 slide-content">
                         <div class="form-row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="title-2">Title</label>
+                                    <input class="form-control" type="text" id="title-2" placeholder="Ex. Primary Address" required="" >
+                                </div>
+                            </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="a_name">Name</label>

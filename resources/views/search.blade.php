@@ -10,6 +10,7 @@
 @section('breadcrumb')
 <nav aria-label="breadcrumb" class="breadcrumb-wrapper style-1">
     <div class="container">
+    <h2 class="title-page">Search Result</h2>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/">Home</a></li>
             <li class="breadcrumb-item active" aria-current="page">Search</li>
@@ -41,7 +42,7 @@
                                 <input type="number" class="rating" value="4" data-readonly>
                             </div>
                             <div class="card-footer">
-                                <div class="cm-flex-center mb-3">
+                                <div class="cm-flex-center">
                                     <p class="plant-price">$65</p>
                                     <div>
                                         <span class="original-price">$80</span><span class="discount-rate">70% off</span>
@@ -69,7 +70,7 @@
                                 <input type="number" class="rating" value="4" data-readonly>
                             </div>
                             <div class="card-footer">
-                                <div class="cm-flex-center mb-3">
+                                <div class="cm-flex-center">
                                     <p class="plant-price">$65</p>
                                     <div>
                                         <span class="original-price">$80</span><span class="discount-rate">70% off</span>
@@ -97,7 +98,7 @@
                                 <input type="number" class="rating" value="4" data-readonly>
                             </div>
                             <div class="card-footer">
-                                <div class="cm-flex-center mb-3">
+                                <div class="cm-flex-center">
                                     <p class="plant-price">$65</p>
                                     <div>
                                         <span class="original-price">$80</span><span class="discount-rate">70% off</span>
@@ -125,7 +126,7 @@
                                 <input type="number" class="rating" value="4" data-readonly>
                             </div>
                             <div class="card-footer">
-                                <div class="cm-flex-center mb-3">
+                                <div class="cm-flex-center">
                                     <p class="plant-price">$65</p>
                                     <div>
                                         <span class="original-price">$80</span><span class="discount-rate">70% off</span>
@@ -153,7 +154,7 @@
                                 <input type="number" class="rating" value="4" data-readonly>
                             </div>
                             <div class="card-footer">
-                                <div class="cm-flex-center mb-3">
+                                <div class="cm-flex-center">
                                     <p class="plant-price">$65</p>
                                     <div>
                                         <span class="original-price">$80</span><span class="discount-rate">70% off</span>
@@ -181,7 +182,7 @@
                                 <input type="number" class="rating" value="4" data-readonly>
                             </div>
                             <div class="card-footer">
-                                <div class="cm-flex-center mb-3">
+                                <div class="cm-flex-center">
                                     <p class="plant-price">$65</p>
                                     <div>
                                         <span class="original-price">$80</span><span class="discount-rate">70% off</span>
@@ -209,7 +210,7 @@
                                 <input type="number" class="rating" value="4" data-readonly>
                             </div>
                             <div class="card-footer">
-                                <div class="cm-flex-center mb-3">
+                                <div class="cm-flex-center">
                                     <p class="plant-price">$65</p>
                                     <div>
                                         <span class="original-price">$80</span><span class="discount-rate">70% off</span>
@@ -237,7 +238,7 @@
                                 <input type="number" class="rating" value="4" data-readonly>
                             </div>
                             <div class="card-footer">
-                                <div class="cm-flex-center mb-3">
+                                <div class="cm-flex-center">
                                     <p class="plant-price">$65</p>
                                     <div>
                                         <span class="original-price">$80</span><span class="discount-rate">70% off</span>

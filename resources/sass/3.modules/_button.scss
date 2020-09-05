@@ -19,6 +19,16 @@ input[type="button"] {
     padding: 8px 16px;
     border-radius: 0;
     font-size: .8rem;
+    &:hover {
+        color: $primary_color;
+        border-color: $primary_color;
+        background: 0 0;
+    }
+    // &:disabled,
+    // &.disabled{
+    //     opacity: .7;
+    //     pointer-events: none;
+    // }
     &.gray {
         background: $dark_gray;
         &:hover {
@@ -26,11 +36,6 @@ input[type="button"] {
             color: $dark_gray;
             border-color: $dark_gray;
         }
-    }
-    &:hover {
-        color: $primary_color;
-        border-color: $primary_color;
-        background: 0 0;
     }
     &.light-btn {
         background-color: $gray;

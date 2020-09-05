@@ -3,18 +3,69 @@
 label {
     display: block;
 }
-
 .form-group {
     margin-bottom: 1rem;
+    .show {
+        position: absolute;
+        top: 28px;
+        right: 1px;
+        cursor: pointer;
+        width: 40px;
+        height: 38px;
+        line-height: 40px;
+        text-align: center;
+        @include default-transition;
+        &:hover {
+            background-color: $gray;
+        }
+        &::before {
+            content: "\f070";
+            @include font-awesome;
+        }
+        &.hide {
+            &::before {
+                content: "\f06e";
+            }
+        }
+    }
     label {
-        margin-bottom: .5rem;
+        margin-bottom: 0.5rem;
         cursor: pointer;
     }
-    &>label{
-        font-size: .8rem;
+    & > label {
+        font-size: 0.8rem;
+    }
+    &.inputFocus {
+        .form-control {
+            border-color: $primary_color;
+            background-color: transparentize($secondary_color, 0.9);
+        }
+    }
+    &.error {
+        .form-control {
+            border-color: $red;
+            background-color: transparentize($red, 0.9);
+        }
+        .invalid-feedback {
+            display: block;
+        }
+        .valid-feedback {
+            display: none;
+        }
+    }
+    &.filled {
+        .form-control {
+            border-color: $green;
+            background-color: transparentize($green, 0.9);
+        }
+        .invalid-feedback {
+            display: none;
+        }
+        .valid-feedback {
+            display: block;
+        }
     }
 }
-
 
 /* One Line Inputs */
 
@@ -51,32 +102,49 @@ select,
     background-color: transparent;
     background-clip: padding-box;
     border-radius: 0;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     min-height: auto;
     height: auto;
     border: none;
-    border: 1px solid $dark_gray;
+    border: 1px solid $text_color;
     &:focus {
         outline: 0;
         box-shadow: none;
         border-color: $primary_color;
-        // background-color: transparentize($primary_light, .95);
+        background-color: transparentize($secondary_color, 0.9);
     }
     &:disabled {
-        opacity: .5;
+        opacity: 0.5;
     }
 }
 
-.select-wrapper {
-    position: relative;
-    &::before {
-        position: absolute;
-        right: 16px;
-        top: 13px;
-        @include font-awesome;
-        content: "\f078";
-        font-weight: 900;
-    }
+input[type="password"] {
+    padding-right: 48px;
+}
+
+/* =========== Remove arrow from input number ============ */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/* ================== Remove cross icon from search ==================== */
+::-ms-clear {
+    display: none;
+}
+/* Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
 }
 
 /* custome radio button */
@@ -86,7 +154,7 @@ select,
         margin-right: 16px;
         font-size: 1rem;
     }
-    input[type='radio'] {
+    input[type="radio"] {
         position: absolute;
         width: 0;
         height: 0;
@@ -94,7 +162,7 @@ select,
             ~ {
                 .radio-button {
                     &::before {
-                        transform: scale(.6);
+                        transform: scale(0.6);
                     }
                 }
             }
@@ -103,7 +171,7 @@ select,
             ~ {
                 .radio-button,
                 label[for] {
-                    opacity: .5;
+                    opacity: 0.5;
                 }
             }
         }
@@ -125,7 +193,7 @@ select,
             background-color: $secondary_color;
             transform: scale(0);
             border-radius: 50%;
-            transition: all .1s ease-in-out;
+            transition: all 0.1s ease-in-out;
         }
     }
 }
@@ -159,7 +227,7 @@ select,
             vertical-align: text-bottom;
         }
     }
-    input[type='checkbox'] {
+    input[type="checkbox"] {
         position: absolute;
         width: 0;
         height: 0;
@@ -167,7 +235,7 @@ select,
             ~ {
                 .checkbox-button,
                 label[for] {
-                    opacity: .5;
+                    opacity: 0.5;
                 }
             }
         }
@@ -183,16 +251,19 @@ select,
     }
 }
 
-.newsletter-form{
-    max-width: 700px;
-    margin: auto;
-}
-
 /* login form wrapper */
-.user-form{
-    .modal-dialog{
+.user-form {
+    .modal-dialog {
         max-width: 100%;
     }
 }
 
-@media only screen and (min-width: 768px){}
+@media only screen and (min-width: 768px) {
+    .user-form {
+        &#form-wrapper {
+            .form-bg {
+                min-height: 350px;
+            }
+        }
+    }
+}

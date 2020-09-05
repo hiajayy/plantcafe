@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title','My cart - Plant Cafe')
-@section('body-class','my-cart-page')
+@section('body-class','cart-page')
 @section('js')
 <script src="{{asset('js/ui.js')}}"></script>
 <script src="{{asset('js/main.js')}}"></script>
@@ -9,6 +9,7 @@
 @section('breadcrumb')
 <nav aria-label="breadcrumb" class="breadcrumb-wrapper style-1">
     <div class="container">
+    <h2 class="title-page">My Cart</h2>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#">Home</a></li>
             <li class="breadcrumb-item active" aria-current="page">My cart</li>

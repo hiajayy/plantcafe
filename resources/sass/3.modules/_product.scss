@@ -1,152 +1,222 @@
-/* shopping cart */
-.shopping-cart-wrapper {
-    max-height: 100vh;
-    overflow: auto;
-    width: 100%;
-    max-width: 400px;
-    position: absolute;
-    top: 100%;
-    right: 1rem;
-    z-index: 9999;
-    background-color: #ffffff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .125);
-    transition: all .3s ease-in-out;
-    // margin-top: 30px;
-    opacity: 0;
-    visibility: hidden;
-    border: 1px solid $dark_gray;
-    .single-cart-header,
-    .single-cart-body,
-    .shopping-cart-footer {
-        padding: .5rem;
-        @include element-mb-0;
+.plant-card,
+.pot-card {
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    margin-bottom: 0;
+    .discount-rate {
+        color: $green;
+        font-weight: 600;
+        font-family: $heading_font;
     }
-    .single-cart-header{
-        color: $primary_light;
-        border-bottom: 1px solid $gray;
-        padding: 1rem .5rem;
-    }
-    .shopping-btn-group,
-    .shoping-total {
-        @include reset-list;
-    }
-    .shoping-total{
-        font-size: 1.2rem;
-        padding-bottom: .5rem;
-        .total-price{
-            font-weight: 600;
-        }
-    }
-    .shopping-btn-group{
-        li{
-            width: 49%;
-            a{
-                display: block;
+
+    &:hover {
+        box-shadow: none;
+        transform: none;
+        .card-image {
+            a {
+                img {
+                    &.back-img {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
             }
         }
     }
-    a.light-btn {
-        display: block;
-        padding: .5rem;
-        margin: .5rem 0 0;
-        background-color: $dark_gray;
-        color: #ffffff;
+
+    .plant-name,
+    .pot-name {
+        font-size: 1.2rem;
     }
-    .shopping-cart-footer{
+
+    .card-image {
+        position: relative;
+        &::before {
+            display: none;
+        }
+        a {
+            position: static;
+            text-align: center;
+            display: block;
+            img {
+                object-fit: cover;
+                height: 300px;
+                width: 100%;
+                &.back-img {
+                    @include default-transition;
+                    opacity: 0;
+                    visibility: hidden;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                }
+            }
+        }
+    }
+
+    .card-option {
+        // display: none;
+        @include reset-list;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        li {
+            margin-bottom: 0.5rem;
+            &:first-child {
+                display: none;
+            }
+        }
+        .light-btn {
+            padding: 0;
+            width: 48px;
+            height: 48px;
+            line-height: 48px;
+            text-align: center;
+        }
+    }
+
+    .card-footer {
+        border-radius: 0;
+        padding: 1rem;
+        border: none;
+        @include element-mb-0;
         position: sticky;
         position: -webkit-sticky;
         bottom: 0;
-        background-color: #ffffff;
-        border-top: 1px solid $gray;
-
-    }
-}
-
-.single-cart{
-    background-color: $gray;
-    padding: .5rem;
-    margin-bottom: .5rem;
-    &:last-child{
-        margin-bottom: 0;
-    }
-    &::after{
-        display: block;
-        clear: both;
-        content: "";
-    }
-    .product-img{
-        max-width: 100px;
-        padding-right: .5rem;
-    }
-    .product-img,
-    .product-details,
-    .remove-item,
-    a {
-        display: inline-block;
-        vertical-align: top;
-    }
-    .product-details{
-        width: calc(100% - 150px);
-        @include element-mb-0;
-        h5{
-            font-size: 1rem;
-        }
-        p{
-            font-size: .9rem;
-        }
-        .quantity {
-            color: $dark_gray;
-        }
-        .price{
-            color: $primary_color;
+        .plant-price,
+        .pot-price {
+            font-size: 1.1rem;
             font-weight: 600;
+            margin-bottom: 0;
         }
-    }
-    .remove-item{
-        width: 40px;
-        height: 40px;
-        line-height: 40px;
-        text-align: center;
-        font-size: 1rem;
-        position: relative;
-        top: -.5rem;
-        right: -.5rem;
-        color: $text_color;
-        &:hover{
-            color: $primary_color;
+        .button {
+            display: none;
         }
     }
 }
 
-.remove-item{
-    &::before{
-        content: "\f2ed";
-        @include font-awesome;
-        font-weight: 900;
+.original-price {
+    color: $dark_gray;
+    padding-right: 0.25rem;
+    text-decoration: line-through;
+}
+
+.tag {
+    color: $dark_gray;
+    display: inline-block;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    font-size: 90%;
+    font-weight: 600;
+}
+
+.added-to-wishlist {
+    .light-btn {
+        background-color: $primary_color;
+        color: #ffffff;
+        &:hover {
+            background-color: $primary_color;
+        }
     }
 }
 
-.wishlist-open{
-    #wishlist-popup{
-        // margin-top: 0;
-        opacity: 1;
-        visibility: visible;
+.last-card {
+    // min-height: 520px;
+    background-color: $primary_color;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+    height: 100%;
+    a {
+        color: inherit;
+        text-transform: uppercase;
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+        span {
+            display: block;
+            font-size: 1.5rem;
+            text-align: center;
+        }
     }
 }
 
-
-.cart-open {
-    #cart-popup {
-        // margin-top: 0;
-        opacity: 1;
-        visibility: visible;
+.owl-carousel {
+    .owl-stage {
+        display: flex;
+    }
+    .owl-item {
+        background-color: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.125);
     }
 }
 
+@media only screen and (max-width: 1199px) {
+    .plant-card,
+    .pot-card {
+        .card-image {
+            img {
+                max-height: 400px;
+                object-fit: cover;
+            }
+        }
+    }
+}
 
-@media only screen and (max-width: 565px){
-    .cart-open #cart-popup,
-    .wishlist-open #wishlist-popup {
-        display: none;
+@media only screen and (max-width: 767px) {
+    .plant-card,
+    .pot-card {
+        .card-option {
+            top: 0.5rem;
+            right: 0.5rem;
+            .light-btn {
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+            }
+        }
+        &:hover {
+            .card-image {
+                a {
+                    img {
+                        &.back-img {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .plant-card,
+    .pot-card {
+        .card-image {
+            a {
+                img {
+                    height: 200px;
+                }
+            }
+        }
+        .card-footer {
+            .secondary-btn {
+                span {
+                    display: none;
+                }
+            }
+        }
+        .light-btn {
+            background-color: transparent;
+        }
+        .card-body {
+            padding: 0.5rem;
+        }
+        &:hover {
+            transform: none;
+        }
     }
 }

@@ -34,12 +34,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
 
+    @yield('css')
+
     <!-- theme color -->
     <meta name="theme-color" content="#587330">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <!-- <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/all.min.css"> -->
     
     <link rel="stylesheet" href="{{asset('css/main.css')}}">
 
@@ -67,132 +66,65 @@
     @include('inc.header')
     <!-- end header -->
 
-    <!-- start nav -->
+    <!-- start side menu nav -->
     <nav class="d-lg-none" id="mainNav">
         <div class="container position-relative">
-            <div class="d-flex cm-flex-center mob-menu-logo">
-                <a class="site-logo link" href="index.html">
+            <div class="d-flex justify-content-between mob-menu-logo">
+                <!-- <a class="site-logo link" href="index.html">
                     <img src="{{asset('images/plantcafe.png')}}" alt="plantcafe">
-                </a>
-                <button class="close-menu no-btn d-lg-none">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+                </a> -->
+                
+                <div class="media mb-0 mr-2">
+                    <a href="/my-profile"><img src="{{asset('images/avatar/female-avatar.png')}}" alt="avatar"></a>
+                    <div class="media-body">
+                        <p class="mb-0">Hello, </p>
+                        <h5 class="mt-0"><a href="/my-profile">Jane Doe</a></h5>
+                    </div>
+                </div>
+
+                <button class="close-menu no-btn d-lg-none"></button>
             </div>
-            <ul class="primary-menu">
-                <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link" href="#">Placements
-                        <i class="fas fa-sort-down d-none d-lg-inline-block"></i>
-                        <div class="child-menu"><i class="fas fa-caret-up"></i></div>
-                    </a>
-                    <ul class="sub-menu">
-                        <li class="nav-item"><a class="nav-link" href="#">Bathroom</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Bed Room</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Hanging</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Living Room</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Office Desk</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Terrace & Balcony</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link" href="#">Type
-                        <i class="fas fa-sort-down d-none d-lg-inline-block"></i>
-                        <div class="child-menu"><i class="fas fa-caret-up"></i></div>
-                    </a>
-                    <ul class="sub-menu">
-                        <li class="nav-item"><a class="nav-link" href="#">Lucky Bamboo</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Air Purifying Plants</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Bonsai Plants</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Flowering Plants</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Money Plants</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Terrariums</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="#">Indoor Plants</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Outdoor Plants</a></li>
-                <!-- <li class="nav-item"><a class="nav-link" href="#">Seeds</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Hurbs</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Garden Art</a></li> -->
-                <li class="nav-item"><a class="nav-link" href="all-pots.html">Pots</a></li>
-            </ul>
-            <ul class="more-option list-inline d-none d-lg-block">
-                <li>
-                    <a href="#" data-link="search">
-                        <i class="fas fa-search"></i>
-                        <span class="sr-only"> Search</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" data-link="cart">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span class="sr-only">Cart</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" data-link="wishlist">
-                        <i class="fas fa-heart"></i>
-                        <span class="sr-only">Wishlist</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fas fa-user"></i>
-                        <span class="sr-only">My Account</span>
-                    </a>
-                </li>
-            </ul>
+            
+            <!-- start nav -->
+            @include('inc.primary-nav')
+            <!-- end nav -->
 
         </div>
     </nav>
-    <!-- end nav -->
-
-    <!-- start search-container -->
-    <div class="search_container_wrapper">
-        <div class="container position-relative">
-            <form class="search_container" autocomplete="off">
-                <input type="search" name="search" id="searh-field" placeholder="Search...">
-                <button class="" type="submit"><i class="fas fa-search"></i> <span class="sr-only">Search</span></button>
-            </form>
-            <button class="close-icon no-btn"></button>
-        </div>
-    </div>
-    <!-- end search-container -->
+    <!-- end side menu nav -->
 
     <!-- start mobile option -->
-    <ul class="more-option list-inline fixed-bottom more-sm-option d-md-none">
+    <ul class="list-inline fixed-bottom more-sm-option d-md-none">
+        <li>
+            <a href="/" class="cart">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+        </li>
+        <li>
+            <a href="/wishlist" class="wishlist">
+                <i class="fas fa-heart"></i>
+                <span>Wishlist</span>
+            </a>
+        </li>
         <li>
             <a href="#" class="my-option">
                 <i class="fas fa-user"></i>
-                <span class="sr-only">My Account</span>
-            </a>
-        </li>
-        <li>
-            <a href="wishlist.html" class="wishlist">
-                <i class="fas fa-heart"></i>
-                <span class="sr-only">Wishlist</span>
-            </a>
-        </li>
-        <li>
-            <a href="my-cart.html" class="cart">
-                <i class="fas fa-shopping-cart"></i>
-                <span class="sr-only">Cart</span>
+                <span>My Account</span>
             </a>
         </li>
     </ul>
     <!-- end mobile option -->
 
     <!-- start user form section -->
-    <div id="form-wrapper" class="modal fade user-form" tabindex="-1" role="dialog" aria-labelledby="form-modal"
-        aria-hidden="true">
+    <div id="form-wrapper" class="modal fade user-form" tabindex="-1" role="dialog" aria-labelledby="form-modal" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="container">
                 <div class="modal-content col-md-6 m-auto">
                     <div class="modal-header">
                         <h5 class="modal-title mt-0" id="form-modal">Welcome to Plant Cafe</h5>
                         <button type="button" class="close no-btn" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
+                            <i class="fas fa-times"></i>
                         </button>
                     </div>
                     <div class="modal-body">
@@ -234,7 +166,36 @@
         </div>
     </div>
     <!-- end user form section -->
-    @yield('breadcrumb')
+
+
+    <!-- start search-container -->
+    <div class="search_container_wrapper">
+        <div class="container position-relative">
+            {{-- <form class="search_container" autocomplete="off">
+                <div class='d-flex w-100'>
+                    <label for="search" class='sr-only'>Search</label>
+                    <input type="text" id="searh-field" placeholder="Search...">
+                    <button type="submit"><i class="fas fa-search"></i>
+                    <span class="sr-only">Search</span></button>
+                </div>
+                <button class="close-icon no-btn"></button>
+            </form> --}}
+
+            <div class="search_container">
+                <div class='d-flex w-100'>
+                    <label for="search" class='sr-only'>Search</label>
+                    <input type="text" id="searh-field" placeholder="Search...">
+                    <button type="submit"><i class="fas fa-search"></i>
+                    <span class="sr-only">Search</span></button>
+                </div>
+                <button class="close-icon no-btn"></button>
+            </div>
+
+        </div>
+    </div>
+    <!-- end search-container -->
+    
+
     <!-- start banner -->
     {{-- @yield('banner-area') --}}
     @section('banner-area')
@@ -242,25 +203,27 @@
     <!-- end banner -->
 
     <!-- start my accout mobile option -->
-    <div class="my-account-wrapper d-md-none">
-        <div class="my-account-header cm-flex-center d-md-none">
-            <div class="close"><i class="fas fa-chevron-left"></i></div>
+    <div class="my-account-wrapper d-md-none mob-slideup">
+        <div class="slideup-head cm-flex-center d-md-none">
+            <div class="close-slide"><i class="fas fa-chevron-left"></i></div>
             <h5 class="m-0"><strong>My Account</strong></h5>
-            <div class="close"><i class="fas fa-times"></i></div>
+            <div class="close-slide"><i class="fas fa-times"></i></div>
         </div>
-        <hr>
-        <ul class="my-account-options">
-            <li><a href="my-profile.html"><i class="fas fa-user mr-2"></i> My Profile</a></li>
-            <li><a href="my-orders.html"><i class="fas fa-folder mr-2"></i> My Order(s)</a></li>
-            <li><a href="address.html"><i class="fas fa-home mr-2"></i> Address</a></li>
-            <li><a href="notifications.html"><i class="fas fa-bell mr-2"></i> Notification</a></li>
-            <li><a href="#"><i class="fas fa-sign-out-alt mr-2"></i> Log Out</a></li>
-        </ul>
+        <div class="slideup-body">
+            <ul class="my-account-options">
+                <li><a href="/my-profile"><i class="fas fa-user mr-2"></i> My Profile</a></li>
+                <li><a href="/my-orders"><i class="fas fa-folder mr-2"></i> My Order(s)</a></li>
+                <li><a href="/address"><i class="fas fa-home mr-2"></i> Address</a></li>
+                <li><a href="/notifications"><i class="fas fa-bell mr-2"></i> Notification</a></li>
+                <li><a href="#"><i class="fas fa-sign-out-alt mr-2"></i> Log Out</a></li>
+            </ul>
+        </div>
     </div>
     <!-- end my accout mobile option -->
 
     <!-- start main -->
     <main>
+        @yield('breadcrumb')
         @yield('main')
     </main>
     
@@ -270,6 +233,35 @@
 
     <!-- back-to-top -->
     <a href="#top" id="back-to-top"><span class="sr-only">Back to Top</span><i class="fas fa-caret-up"></i></a>
+
+
+    <!-- start newsletter -->
+    <section class='light-bg py-4'>
+        <div class="container">
+            <div class="row">
+                <div class='col-md-4'>
+                    <h2>Subscribe</h2>
+                </div>
+                <form class="newsletter-form col-md-8 m-auto">
+                    <div class="form-group mb-0">
+                        <p>Join us to recieve gardening tips, offers, news & more</p>
+                        <label for="newslatter" class='sr-only'>Join us to recieve gardening tips, offers, news & more</label>
+                        <div class="d-flex">
+                            <input type="text" class="form-control" id="newslatter" placeholder="Your Email Address">
+                            <button class="button">Subscribe</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- end newsletter -->
+
+
+    <!-- start overlay -->
+    <div class="overlay"></div>
+    <!-- end overlay -->
+
 
     <!-- start footer -->
     @include('inc.footer')

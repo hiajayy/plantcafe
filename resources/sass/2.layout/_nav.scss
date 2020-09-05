@@ -1,5 +1,37 @@
-/* =============== Custom Menu Primary =============== */
+/* header right icons */
+.more-option {
+    li {
+        &:not(:last-child) {
+            border-right: 1px solid $text_color;
+        }
 
+        a {
+            display: block;
+            padding: 0 0.5rem;
+        }
+    }
+}
+a[data-link="cart"],
+a[data-link="wishlist"] {
+    position: relative;
+    .count {
+        font-size: 11px;
+        display: inline-block;
+        color: #fff;
+        background-color: $primary_color;
+        border-radius: 50%;
+        text-align: center;
+        width: 14px;
+        height: 14px;
+        line-height: 14px;
+        position: absolute;
+        right: 0.25rem;
+        bottom: 0;
+    }
+}
+
+
+/* =============== Custom Menu Primary =============== */
 .primary-menu {
     font-size: 0;
     position: relative;    
@@ -87,16 +119,23 @@
         &:not(:last-child){
             border-right: 1px solid $gray;
         }
+        i{
+            display: block;
+        }
         a{
-            padding: .75rem;
+            display: block;
+            padding: 0.5rem;
+            line-height: 1;
+            span{
+                font-size: 0.75rem;
+            }
         }
     }
 }
 
 /* ===== Mobile Toggle Button ===== */
 
-.mobile-menu,
-.close-menu {
+.mobile-menu{
     display: block;
     width: 40px;
     height: 40px;
@@ -137,32 +176,36 @@
     }
 }
 
-.close-menu {
-    span {
-        &:nth-child(1) {
-            width: 32px;
-            -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-            left: 8px;
-        }
-
-        &:nth-child(2) {
-            width: 0;
-            opacity: 0;
-        }
-
-        &:nth-child(3) {
-            width: 32px;
-            -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-            top: 32px;
-            left: 8px;
-        }
+.close-menu{
+    // position: absolute;
+    // top: 2rem;
+    // right: 1rem;
+    position: relative;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    &::before,
+    &::after{
+        content: "";
+        position: absolute;
+        top: 16px;
+        left: 4px;
+        width: 24px;
+        height: 1px;
+        background-color: $secondary_color;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    &::after{
+        transform: rotate(-45deg);
     }
 }
 
 @media only screen and (min-width:768px){
     .dropdown {
+        position: relative;
         .dropdown-items {
             @include reset-list;
             position: absolute;
@@ -172,30 +215,14 @@
             background-color: $text_color;
             background-color: #fff;
             box-shadow: 0 4px 4px rgba(0, 0, 0, .125);
-            opacity: 0;
-            visibility: hidden;
-            margin-top: 30px;
-            transition: all .3s ease-in-out;
-            z-index: 999;
+            z-index: 9;
+            display: none;
             li{
                 display: block;
                 border-bottom: 1px solid $gray;
                 a{
                     padding: 1rem;
                 }
-            }
-        }
-        &:hover {
-            .dropdown-items {
-                opacity: 1;
-                visibility: visible;
-                margin-top: 0;
-            }
-        }
-        &>.nav-link{
-            i{
-                padding-left: .5rem;
-                vertical-align: text-top;
             }
         }
     }
@@ -234,17 +261,8 @@
             background-color: $text_color;
             background-color: #fff;
             box-shadow: 0 4px 4px rgba(0, 0, 0, .125);
-            opacity: 0;
-            visibility: hidden;
-            margin-top: 30px;
-            transition: all .3s ease-in-out;
-        }
-        &:hover {
-            .sub-menu {
-                opacity: 1;
-                visibility: visible;
-                margin-top: 0;
-            }
+            z-index: 9;
+            display: none;
         }
         &>.nav-link{
             i{
@@ -359,14 +377,6 @@
 
 }
 
-@media only screen and (max-width: 767px){
-
-    .breadcrumb-wrapper.style-1{
-        padding-top: 1.5rem;
-        .breadcrumb{
-            display: none;
-        }
-    }
-}
+@media only screen and (max-width: 767px){}
 
 @media only screen and (max-width: 575px){}

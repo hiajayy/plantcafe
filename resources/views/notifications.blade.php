@@ -9,9 +9,10 @@
 @section('breadcrumb')
 <nav aria-label="breadcrumb" class="breadcrumb-wrapper style-1">
     <div class="container">
+    <h2 class="title-page">Notification(s)</h2>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Notifications</li>
+            <li class="breadcrumb-item active" aria-current="page">Notification(s)</li>
         </ol>
     </div>
 </nav>
@@ -33,7 +34,7 @@
 
         <section class="inner-wrapper">
             <div class="container ">
-                <h2>Notification</h2>
+                <h2>Notification(s)</h2>
                 <div class="row ">
                     <div class="col-12 ">
                         <div class="tiles">

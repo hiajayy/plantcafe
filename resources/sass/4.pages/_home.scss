@@ -1,0 +1,203 @@
+/* =============== banner area =============== */
+.banner-area {
+    .banner-slide {
+        @include flex-center;
+        position: relative;
+        max-width: 100%;
+        z-index: 1;
+        background-size: cover;
+        background-position: bottom right;
+        padding: 20rem 0;
+    }
+
+    .owl-dots {
+        bottom: 40px;
+        position: absolute;
+        width: 100%;
+    }
+}
+
+/* =============== offer area =============== */
+.offer-area-wrapper {
+    .offers-slide {
+        min-height: auto;
+        text-align: center;
+        .offers-content {
+            @include flex-center;
+            position: relative;
+            max-width: 100%;
+            margin-bottom: 0.5rem;
+            z-index: 1;
+            min-height: 250px;
+            background-size: cover;
+            &::before {
+                @include bg-overlay;
+                z-index: -1;
+            }
+        }
+        .button {
+            padding: 5px 10px;
+        }
+
+        img {
+            max-height: 300px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
+    }
+    .owl-carousel {
+        .owl-dots {
+            max-width: 100%;
+            text-align: center;
+            position: static;
+        }
+    }
+}
+
+/* =============== deals Card =============== */
+
+.deals-card {
+    font-size: 1.1rem;
+    @include element-mb-0;
+    display: block;
+    padding: 2rem 1rem;
+    display: block;
+    position: relative;
+    color: $text_color;
+    background-size: cover;
+    text-align: center;
+    background-position: center;
+    border: 1px solid $gray;
+    background-color: #ffffff;
+    &:hover {
+        @include box-shadow;
+        transform: translateY(-0.5rem);
+    }
+    .discount-rate {
+        font-size: 2rem;
+        color: $secondary_color;
+        font-family: $heading_font;
+    }
+}
+
+.offers-slider-wrapper {
+    &.owl-carousel {
+        .owl-item {
+            background-color: transparent;
+            border: none;
+        }
+    }
+}
+
+.badge {
+    &.timer {
+        background-color: $primary_light;
+        color: #ffffff;
+        font-size: 1.4rem;
+    }
+}
+
+/* =============== testimonial =============== */
+.testimonial_content {
+    text-align: center;
+    @include flex-center;
+    .client-feedback {
+        font-size: 1rem;
+        padding: 1rem;
+        @include flex-center;
+        flex-direction: column;
+        max-width: 90%;
+        i.fa-quote-left {
+            color: $gray;
+        }
+    }
+}
+
+/* =============== Feature Area =============== */
+.feature-area-wrapper {
+    .col-md-3 {
+        border: 1px solid #dddddd;
+        .feature-area {
+            .icon {
+                font-size: 2rem;
+                display: inline-block;
+                width: 3.5rem;
+                height: 3.5rem;
+                line-height: 3.5rem;
+                background-color: $primary_light;
+                color: #ffffff;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}
+
+/* plants-slider owl carousel */
+.plants-slider {
+    &.owl-carousel {
+        padding: 0 3rem;
+        .owl-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            width: 100%;
+            .owl-prev,
+            .owl-next {
+                position: absolute;
+                background-color: $gray;
+                color: $dark_gray;
+                &:hover {
+                    border-color: transparent;
+                    color: $gray;
+                    background-color: $dark_gray;
+                }
+                &.disabled {
+                    opacity: 0.5;
+                    pointer-events: none;
+                }
+            }
+            .owl-prev {
+                left: 0;
+            }
+            .owl-next {
+                right: 0;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .testimonial_content {
+        .client-feedback {
+            padding: 1.5rem;
+        }
+    }
+    .banner-area {
+        .banner-slide {
+            padding: 10rem 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .testimonial_content {
+        .client-feedback {
+            i.fa-quote-left {
+                display: none;
+            }
+        }
+    }
+
+    .offer-card {
+        min-height: 120px;
+        .discount-rate {
+            padding: 0.5rem 0.5rem 1rem 1rem;
+        }
+        &:hover {
+            transform: none;
+        }
+    }
+}

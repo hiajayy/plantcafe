@@ -10,6 +10,7 @@
 @section('breadcrumb')
 <nav aria-label="breadcrumb" class="breadcrumb-wrapper style-1">
     <div class="container">
+    <h2 class="title-page">All Plants</h2>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#">Home</a></li>
             <li class="breadcrumb-item active" aria-current="page">All Plants</li>
@@ -29,7 +30,7 @@
                         </div>
                         <p class="mb-0 d-none d-md-block"><strong>Filter</strong></p>
                         <hr>
-                        <div class="filter-option-wrapper">
+                        <div class="filter-option-wrapper tiles">
                             <h5 class="filter-option slide-btn">By Categories</h5>
                             <div class="filter-option-data slide-content">
                                 <ul>
@@ -76,7 +77,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="filter-option-wrapper">
+                        <div class="filter-option-wrapper tiles">
                             <h5 class="filter-option slide-btn">By Placement</h5>
                             <div class="filter-option-data slide-content">
                                 <ul>
@@ -131,7 +132,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="filter-option-wrapper">
+                        <div class="filter-option-wrapper tiles">
                             <h5 class="filter-option slide-btn">By Type</h5>
                             <div class="filter-option-data slide-content">
                                 <ul>
@@ -198,6 +199,11 @@
                                     <li><a href="#"><i class="fas fa-sort-amount-down mr-2"></i> Price High to low</a></li>
                                 </ul>
                             </div>
+                            <!-- <select name="sort-plant" id="sort-plant" class='w-auto'>
+                                <option value="sort" class='sort-price'><i class="fas fa-sort"></i> Sort</option>
+                                <option value="low-to-high"><i class="fas fa-sort-amount-up mr-2"></i> Price Low to High</option>
+                                <option value="high-to-low"><i class="fas fa-sort-amount-down mr-2"></i> Price High to low</option>
+                            </select> -->
                         </div>
                         <hr class="mb-3">
                         <div class="row">
@@ -221,7 +227,7 @@
                                         <input type="number" class="rating" value="3" data-readonly>
                                     </div>
                                     <div class="card-footer">
-                                        <div class="cm-flex-center mb-3">
+                                        <div class="cm-flex-center">
                                             <p class="plant-price">$65</p>
                                             <div>
                                                 <span class="original-price">$80</span><span class="discount-rate">70% off</span>
@@ -251,7 +257,7 @@
                                         <input type="number" class="rating" value="3" data-readonly>
                                     </div>
                                     <div class="card-footer">
-                                        <div class="cm-flex-center mb-3">
+                                        <div class="cm-flex-center">
                                             <p class="plant-price">$65</p>
                                             <div>
                                                 <span class="original-price">$80</span><span class="discount-rate">70% off</span>
@@ -281,7 +287,7 @@
                                         <input type="number" class="rating" value="3" data-readonly>
                                     </div>
                                     <div class="card-footer">
-                                        <div class="cm-flex-center mb-3">
+                                        <div class="cm-flex-center">
                                             <p class="plant-price">$65</p>
                                             <div>
                                                 <span class="original-price">$80</span><span class="discount-rate">70% off</span>
@@ -311,7 +317,7 @@
                                         <input type="number" class="rating" value="3" data-readonly>
                                     </div>
                                     <div class="card-footer">
-                                        <div class="cm-flex-center mb-3">
+                                        <div class="cm-flex-center">
                                             <p class="plant-price">$65</p>
                                             <div>
                                                 <span class="original-price">$80</span><span class="discount-rate">70% off</span>
@@ -341,7 +347,7 @@
                                         <input type="number" class="rating" value="3" data-readonly>
                                     </div>
                                     <div class="card-footer">
-                                        <div class="cm-flex-center mb-3">
+                                        <div class="cm-flex-center">
                                             <p class="plant-price">$65</p>
                                             <div>
                                                 <span class="original-price">$80</span><span class="discount-rate">70% off</span>
@@ -371,7 +377,7 @@
                                         <input type="number" class="rating" value="3" data-readonly>
                                     </div>
                                     <div class="card-footer">
-                                        <div class="cm-flex-center mb-3">
+                                        <div class="cm-flex-center">
                                             <p class="plant-price">$65</p>
                                             <div>
                                                 <span class="original-price">$80</span><span class="discount-rate">70% off</span>
@@ -401,7 +407,7 @@
                                         <input type="number" class="rating" value="3" data-readonly>
                                     </div>
                                     <div class="card-footer">
-                                        <div class="cm-flex-center mb-3">
+                                        <div class="cm-flex-center">
                                             <p class="plant-price">$65</p>
                                             <div>
                                                 <span class="original-price">$80</span><span class="discount-rate">70% off</span>
@@ -431,7 +437,7 @@
                                         <input type="number" class="rating" value="3" data-readonly>
                                     </div>
                                     <div class="card-footer">
-                                        <div class="cm-flex-center mb-3">
+                                        <div class="cm-flex-center">
                                             <p class="plant-price">$65</p>
                                             <div>
                                                 <span class="original-price">$80</span><span class="discount-rate">70% off</span>
@@ -461,7 +467,7 @@
                                         <input type="number" class="rating" value="3" data-readonly>
                                     </div>
                                     <div class="card-footer">
-                                        <div class="cm-flex-center mb-3">
+                                        <div class="cm-flex-center">
                                             <p class="plant-price">$65</p>
                                             <div>
                                                 <span class="original-price">$80</span><span class="discount-rate">70% off</span>

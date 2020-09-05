@@ -2,22 +2,22 @@ class UI {
 
     /* create loader */
     createLoader(){
-        const loaderWrapper = document.createElement('div');
-        const loader = document.createElement('div');
-        const img = document.createElement('img');
+        // const loaderWrapper = document.createElement('div');
+        // const loader = document.createElement('div');
+        // const img = document.createElement('img');
 
-        loaderWrapper.classList.add('loader-wrapper');
-        loader.classList.add('loader');
-        img.classList.add('loading-img');
+        // loaderWrapper.classList.add('loader-wrapper');
+        // loader.classList.add('loader');
+        // img.classList.add('loading-img');
 
-        img.setAttribute('src', 'assets/images/loading.gif');
-        img.setAttribute('alt', 'Loader');
+        // img.setAttribute('src', 'assets/images/loading.gif');
+        // img.setAttribute('alt', 'Loader');
 
-        const siteWrapper = document.querySelector('.site-wrapper');
-        document.body.insertBefore(loaderWrapper, siteWrapper);
-        loaderWrapper.append(loader);
-        loader.append(img);
-        document.body.style.overflow = 'hidden';
+        // const siteWrapper = document.querySelector('.site-wrapper');
+        // document.body.insertBefore(loaderWrapper, siteWrapper);
+        // loaderWrapper.append(loader);
+        // loader.append(img);
+        // document.body.style.overflow = 'hidden';
     }
 
     /* remove loader */
@@ -27,13 +27,6 @@ class UI {
         if(loaderWrapper !== null){
             loaderWrapper.remove();
         }
-    }
-
-    /* overlay */
-    overlay() {
-        const overlay = document.createElement('div');
-        overlay.classList.add('overlay');
-        document.body.appendChild(overlay);
     }
 
     //show confirm message
@@ -55,7 +48,7 @@ class UI {
         modalBox.className = 'confirm-box modal-content';
         modalHeader.classList = 'modal-header';
         modalBody.classList = 'modal-body';
-        heading.classList.add('mb-0');
+        heading.classList.add('m-0');
         subBtn.className = `btn btn-block ${btnClass}`;
         subBtn.id = 'submit';
         close.className = 'close no-btn';
@@ -73,7 +66,7 @@ class UI {
         heading.appendChild(document.createTextNode(head));
         para.appendChild(document.createTextNode(desc));
         subBtn.appendChild(document.createTextNode(btnText));
-        close.innerHTML = '&times;';
+        close.innerHTML = '<i class="fas fa-times"></i>';
 
         //append child
         document.body.appendChild(confirmModel);
@@ -90,7 +83,7 @@ class UI {
     /* delete data */
     deleteData(target) {
         if (target.classList.contains('remove-item')) {
-            UI.modalBox('Are you sure?', 'You want to delete this record?', 'Delete Record', 'danger-btn');
+            UI.modalBox('Are you sure?', 'You want to delete this Product?', 'Delete Record', 'danger-btn');
     
             const modalContent = document.getElementById('confirmMessage');
             const trIndex = target.parentElement.parentElement.rowIndex - 1;
@@ -106,6 +99,32 @@ class UI {
             })
         }
     }
+
+    /* mobile slideup content */
+    slideUp(link, target){
+        // console.log(link);
+        link.addEventListener('click', function(e){
+            if(target.classList.contains('show')){
+                target.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }else{
+                target.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+
+            target.onclick = function(e){
+                if(e.target.classList.contains('fa-times') || e.target.classList.contains('fa-chevron-left')){
+                    target.classList.remove('show');
+                }
+            }
+            e.preventDefault();
+        })
+    }
+
+
+
+
+
 }
 
 /* instantiate UI */

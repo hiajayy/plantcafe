@@ -9,6 +9,7 @@
 @section('breadcrumb')
 <nav aria-label="breadcrumb" class="breadcrumb-wrapper style-1">
     <div class="container">
+    <h2 class="title-page">Contact Us</h2>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/">Home</a></li>
             <li class="breadcrumb-item active" aria-current="page">Contact us</li>
@@ -21,7 +22,7 @@
             <div class="container ">
                 <h2>Contact Us</h2>
                 <div class="row ">
-                    <div class="col-12">
+                    <div class="col-md-7 m-auto">
                         <p>Did you know you can find answers to many <strong>Frequently Asked Questions(FAQs)</strong> <a href="/faqs" class="font-weight-bold">here</a></p>
                         <p>If your question is not answered, just fill out the form fields below</p>
                         <!-- <p>If you're not happy, we're not happy. We try to get everything right first time, but we know that sometimes things can go wrong. If this happens, please let us know so we can put it right.

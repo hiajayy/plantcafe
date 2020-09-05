@@ -1,14 +1,17 @@
 @extends('layouts.app')
 @section('title','My Orders - Plant Cafe')
-@section('body-class','my-orders-page')
+@section('body-class','my-order-page')
 @section('js')
 <script src="{{asset('js/ui.js')}}"></script>
 <script src="{{asset('js/main.js')}}"></script>
+<script src="{{asset('js/bootstrap4-rating-input.js')}}"></script>
+<script src="https://use.fontawesome.com/5ac93d4ca8.js"></script>
 
 @endsection
 @section('breadcrumb')
 <nav aria-label="breadcrumb" class="breadcrumb-wrapper style-1">
     <div class="container">
+    <h2 class="title-page">My Orders</h2>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/">Home</a></li>
             <li class="breadcrumb-item active" aria-current="page">My Orders</li>
@@ -38,16 +41,18 @@
                     <div class="col-12">
                         <div class="tiles">
                             <div class="media">
-                                <a class="d-flex align-self-bottom" href="ordered-product.html">
-                                        <img src="{{asset('images/placement/bathroom/alex-loup.jpg')}}" alt="plant">
+                                <a class="d-flex align-self-bottom" href="/ordered-product">
+                                    <img src="{{asset('images/placement/bathroom/alex-loup.jpg')}}" alt="plant">
                                 </a>
-                                <div class="media-body">
-                                    <p class="font-weight-bold"><a href="ordered-product.html">Plant Name Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, ducimus.</a></p>
-                                    <p>$65</p>
-                                    <p class="gray-text">Delivered on 10th Aug</p>
-                                </div>
-                                <div class="text-md-right rating-btn">
-                                    <a href="#">Rating and Review</a>
+                                <div class="row w-100">
+                                    <div class="media-body col-md-8">
+                                        <p class="font-weight-bold"><a href="/ordered-product">Plant Name Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, ducimus.</a></p>
+                                        <p>$65</p>
+                                        <p class="gray-text">Delivered on 10th Aug</p>
+                                    </div>
+                                    <div class="col-md-4 text-md-right rating-btn">
+                                        <a href="#">Rating and Review</a>
+                                    </div>
                                 </div>
                             </div>
                             <div class="rating-and-review-wrapper tiles rating-content">
@@ -82,14 +87,16 @@
                                 <a class="d-flex align-self-bottom" href="/ordered-product">
                                     <img src="{{asset('images/placement/bathroom/good-soul-shop.jpg')}}" alt="plant">
                                 </a>
-                                <div class="media-body">
-                                    <p class="font-weight-bold"><a href="/ordered-product">Plant Name Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, ducimus.</a></p>
-                                    <p>$65</p>
-                                    <p class="gray-text">Delivered on 10th Aug</p>
-                                    <input type="number" class="rating" value="4">
-                                </div>
-                                <div class="rating-btn edit-rating-btn text-md-right">
-                                    <a href="#" class="gray-text">Edit Review</a>
+                                <div class='row w-100'>
+                                    <div class="media-body col-md-8">
+                                        <p class="font-weight-bold"><a href="/ordered-product">Plant Name Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, ducimus.</a></p>
+                                        <p>$65</p>
+                                        <p class="gray-text">Delivered on 10th Aug</p>
+                                        <input type="number" class="rating" value="4">
+                                    </div>
+                                    <div class="col-md-4 rating-btn edit-rating-btn text-md-right">
+                                        <a href="#" class="gray-text">Edit Review</a>
+                                    </div>
                                 </div>
                             </div>
                             <div class="rating-and-review-wrapper tiles rating-content">
@@ -121,17 +128,19 @@
 
                         <div class="tiles">
                             <div class="media">
-                                <a class="d-flex align-self-bottom" href="ordered-product.html">
+                                <a class="d-flex align-self-bottom" href="/ordered-product">
                                     <img src="{{asset('images/placement/bathroom/simon-godfrey.jpg')}}" alt="plant">
                                 </a>
-                                <div class="media-body">
-                                    <p class="font-weight-bold"><a href="ordered-product.html">Plant Name Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, ducimus.</a></p>
-                                    <p>$65</p>
-                                    <p class="gray-text">Delivered on 10th Aug</p>
-                                    <input type="number" class="rating" value="3">
-                                </div>
-                                <div class="rating-btn edit-rating-btn text-md-right">
-                                    <a href="#" class="gray-text">Edit Review</a>
+                                <div class="row w-100">
+                                    <div class="media-body col-md-8">
+                                        <p class="font-weight-bold"><a href="/ordered-product">Plant Name Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, ducimus.</a></p>
+                                        <p>$65</p>
+                                        <p class="gray-text">Delivered on 10th Aug</p>
+                                        <input type="number" class="rating" value="3">
+                                    </div>
+                                    <div class="col-md-4 rating-btn edit-rating-btn text-md-right">
+                                        <a href="#" class="gray-text">Edit Review</a>
+                                    </div>
                                 </div>
                             </div>
                             <div class="rating-and-review-wrapper tiles rating-content">
@@ -163,12 +172,12 @@
 
                         <div class="tiles">
                             <div class="media">
-                                <a class="d-flex align-self-bottom" href="product.html">
+                                <a class="d-flex align-self-bottom" href="/product">
                                     <img src="{{asset('images/placement/bathroom/curology-gipn7g.jpg')}}" alt="plant">
                                 </a>
                                 <div class="media-body row">
                                     <div class="col-md-8">
-                                        <p class="font-weight-bold"><a href="#">Plant Name Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, ducimus.</a></p>
+                                        <p class="font-weight-bold"><a href="/product">Plant Name Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, ducimus.</a></p>
                                         <p class="gray-text">Cancelled Product</p>
                                     </div>
                                 </div>

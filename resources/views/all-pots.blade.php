@@ -10,6 +10,7 @@
 @section('breadcrumb')
 <nav aria-label="breadcrumb" class="breadcrumb-wrapper style-1">
     <div class="container">
+    <h2 class="title-page">All Pots</h2>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#">Home</a></li>
             <li class="breadcrumb-item active" aria-current="page">All Pots</li>
@@ -30,7 +31,7 @@
                         </div>
                         <p class="mb-0 d-none d-md-block"><strong>Filter</strong></p>
                         <hr>
-                        <div class="filter-option-wrapper open">
+                        <div class="filter-option-wrapper open tiles">
                             <h5 class="filter-option slide-btn">By Categories</h5>
                             <div class="filter-option-data slide-content">
                                 <ul>
@@ -112,7 +113,7 @@
                                         <input type="number" class="rating" value="3" data-readonly>
                                     </div>
                                     <div class="card-footer">
-                                        <div class="cm-flex-center mb-3">
+                                        <div class="cm-flex-center">
                                             <p class="pot-price">$65</p>
                                             <div>
                                                 <span class="original-price">$80</span><span class="discount-rate">70% off</span>
@@ -142,7 +143,7 @@
                                         <input type="number" class="rating" value="3" data-readonly>
                                     </div>
                                     <div class="card-footer">
-                                        <div class="cm-flex-center mb-3">
+                                        <div class="cm-flex-center">
                                             <p class="pot-price">$65</p>
                                             <div>
                                                 <span class="original-price">$80</span><span class="discount-rate">70% off</span>
@@ -172,7 +173,7 @@
                                         <input type="number" class="rating" value="3" data-readonly>
                                     </div>
                                     <div class="card-footer">
-                                        <div class="cm-flex-center mb-3">
+                                        <div class="cm-flex-center">
                                             <p class="pot-price">$65</p>
                                             <div>
                                                 <span class="original-price">$80</span><span class="discount-rate">70% off</span>
@@ -202,7 +203,7 @@
                                         <input type="number" class="rating" value="3" data-readonly>
                                     </div>
                                     <div class="card-footer">
-                                        <div class="cm-flex-center mb-3">
+                                        <div class="cm-flex-center">
                                             <p class="pot-price">$65</p>
                                             <div>
                                                 <span class="original-price">$80</span><span class="discount-rate">70% off</span>
@@ -232,7 +233,7 @@
                                         <input type="number" class="rating" value="3" data-readonly>
                                     </div>
                                     <div class="card-footer">
-                                        <div class="cm-flex-center mb-3">
+                                        <div class="cm-flex-center">
                                             <p class="pot-price">$65</p>
                                             <div>
                                                 <span class="original-price">$80</span><span class="discount-rate">70% off</span>
@@ -262,7 +263,7 @@
                                         <input type="number" class="rating" value="3" data-readonly>
                                     </div>
                                     <div class="card-footer">
-                                        <div class="cm-flex-center mb-3">
+                                        <div class="cm-flex-center">
                                             <p class="pot-price">$65</p>
                                             <div>
                                                 <span class="original-price">$80</span><span class="discount-rate">70% off</span>
@@ -292,7 +293,7 @@
                                         <input type="number" class="rating" value="3" data-readonly>
                                     </div>
                                     <div class="card-footer">
-                                        <div class="cm-flex-center mb-3">
+                                        <div class="cm-flex-center">
                                             <p class="pot-price">$65</p>
                                             <div>
                                                 <span class="original-price">$80</span><span class="discount-rate">70% off</span>
@@ -322,7 +323,7 @@
                                         <input type="number" class="rating" value="3" data-readonly>
                                     </div>
                                     <div class="card-footer">
-                                        <div class="cm-flex-center mb-3">
+                                        <div class="cm-flex-center">
                                             <p class="pot-price">$65</p>
                                             <div>
                                                 <span class="original-price">$80</span><span class="discount-rate">70% off</span>
@@ -352,7 +353,7 @@
                                         <input type="number" class="rating" value="3" data-readonly>
                                     </div>
                                     <div class="card-footer">
-                                        <div class="cm-flex-center mb-3">
+                                        <div class="cm-flex-center">
                                             <p class="pot-price">$65</p>
                                             <div>
                                                 <span class="original-price">$80</span><span class="discount-rate">70% off</span>

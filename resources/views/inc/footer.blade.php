@@ -1,5 +1,4 @@
 <footer class="text-white bg-dark">
-
         <!-- footer-top -->
         <div class="footer-top">
             <div class="container ">
@@ -7,14 +6,6 @@
                     <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
                         <h4>About Plant Cafe</h4>
                         <p class="mb-0">Plant Cafe is a E-commerce dummy template designed by Deepart.</p>
-                        <ul class="list-inline social-icons d-none d-md-block">
-                            <li class="list-inline-item "><a href="# " title="Facebook"><i
-                                        class="fab fa-facebook-f"></i></a></li>
-                            <li class="list-inline-item "><a href="# " title="instagram"><i
-                                        class="fab fa-instagram"></i></a></li>
-                            <li class="list-inline-item "><a href="# " title="Twitter"><i
-                                        class="fab fa-twitter"></i></a></li>
-                        </ul>
                     </div>
                     <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
                         <h4>Informations</h4>
@@ -34,8 +25,8 @@
                         </ul>
                     </div>
                     <div class="col-lg-3 col-md-6">
-                        <h4>Contact Us</h4>
-                        <ul class="contact-info no-style">
+                        <h4>Follow Us</h4>
+                        <!-- <ul class="contact-info no-style">
                             <li>
                                 <a href="#"><i class="fas fa-phone-alt"></i> +91-9876543210</a>
                             </li>
@@ -46,6 +37,14 @@
                                 <a href="#"><i class="fas fa-map-marker-alt"></i> Lorem ipsum dolor, sit amet
                                     consectetur adipisicing elit.</a>
                             </li>
+                        </ul> -->
+                        <ul class="list-inline social-icons">
+                            <li class="list-inline-item "><a href="# " title="Facebook"><i
+                                        class="fab fa-facebook-f"></i></a></li>
+                            <li class="list-inline-item "><a href="# " title="instagram"><i
+                                        class="fab fa-instagram"></i></a></li>
+                            <li class="list-inline-item "><a href="# " title="Twitter"><i
+                                        class="fab fa-twitter"></i></a></li>
                         </ul>
                     </div>
                 </div>

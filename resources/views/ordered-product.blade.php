@@ -8,12 +8,13 @@
 @endsection
 @section('breadcrumb')
 <nav aria-label="breadcrumb" class="breadcrumb-wrapper style-1">
-        <div class="container">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Ordered Product</li>
-            </ol>
-        </div>
+    <div class="container">
+    <h2 class="title-page">Ordered Product(s)</h2>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Ordered Product(s)</li>
+        </ol>
+    </div>
 </nav>
 @endsection
 @section('main')
@@ -42,7 +43,7 @@
                         </div>
                         <div class="cm-flex-center">
                             <a href="#" class="button">Reorder</a>
-                            <p><a href="#" class="rating-btn font-weight-bold">Rating and Review</a></p>
+                            <p><a href="#" class="rating-btn">Rating and Review</a></p>
                         </div>
                     </div>
 
@@ -83,7 +84,7 @@
                                 </div>
                                 <div class="cm-flex-center">
                                     <a href="#" class="button">Reorder</a>
-                                    <p><a href="#" class="rating-btn font-weight-bold">Rating and Review</a></p>
+                                    <p><a href="#" class="rating-btn">Rating and Review</a></p>
                                 </div>
                             </div>
         
@@ -100,7 +101,7 @@
                                 </div>
                                 <div class="cm-flex-center">
                                     <a href="#" class="button">Reorder</a>
-                                    <p><a href="#" class="rating-btn font-weight-bold">Rating and Review</a></p>
+                                    <p><a href="#" class="rating-btn">Rating and Review</a></p>
                                 </div>
                             </div>
                         </div>

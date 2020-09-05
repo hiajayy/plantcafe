@@ -18,6 +18,7 @@
 }
 
 .add{
+    cursor: pointer;
     &::before{
         @include font-awesome;
         @include default-transition;
@@ -29,6 +30,7 @@
 }
 
 .edit{
+    cursor: pointer;
     &::before{
         @include font-awesome;
         content: "\f304";
@@ -38,19 +40,31 @@
     }
 }
 
-.delete{
+.delete,
+.danger-btn{
+    cursor: pointer;
     &::before{
         @include font-awesome;
         content: "\f1f8";
-        font-weight: 900;
-        // font-size: 80%;
         padding-right: .5rem;
     }
 }
 
+.remove-item{
+    cursor: pointer;
+    &::before{
+        @include font-awesome;
+        content: "\f1f8";
+        padding-right: 0;
+    }
+}
+
+.my-profile-page,
 .my-order-page,
 .cart-page,
-.checkout-page{
+.checkout-page,
+.wishlist-page,
+.ordered-product-page{
     .media{
         margin-bottom: 1rem;
         img{
@@ -154,30 +168,6 @@
     }
 }
 
-.my-account-wrapper{
-    position: fixed;
-    top: 200%;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: #fff;
-    z-index: 9999;
-    padding: 1rem .5rem;
-   @include default-transition;
-    &.show{
-        top: 0;
-    }
-    .my-account-options{
-        @include reset-list;
-        li{
-            a{
-                display: block;
-                padding: .5rem;
-            }
-        }
-    }
-}
-
 .rating-input{
     color: $primary_color;
     i{
@@ -191,24 +181,6 @@
     p{
         a{
             color: $text_color;
-        }
-    }
-}
-
-.change-pot-wrapper{
-    .card{
-        display: inline-block;
-        width: auto;
-        a{
-            display: block;
-        }
-        .card-image{
-            a{
-                padding: 1rem;
-                img{
-                    height: 250px;
-                }
-            }
         }
     }
 }

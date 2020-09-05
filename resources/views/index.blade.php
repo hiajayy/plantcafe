@@ -12,57 +12,104 @@
 @endsection
 @section('banner-area')
 @parent
-<div class="banner-area">
-        <div class="banner-slider owl-carousel">
-            <div class="banner-slide" style="background-image: url({{asset('images/placement/office-desk/scott-webb.jpg')}});">
-                <div class="container">
-                    <div class="caption-text">
+<!-- <div class="banner-area">
+    <div class="banner-slider owl-carousel">
+        <div class="banner-slide" style="background-image: url({{asset('images/placement/office-desk/scott-webb.jpg')}});">
+            <div class="container">
+                <div class="caption-text col-md-6">
+                    <h2>Plants for Office Desk</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui aliquid voluptates at, quam nam earum repudiandae soluta.</p>
+                    <a href="#" class="button">View More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="banner-slide" style="background-image: url({{asset('images/indoor-plants/dose-media.jpg')}});">
+            <div class="container">
+                <div class="caption-text col-md-6">
+                    <h2>Hanging Plants</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui aliquid voluptates at, quam nam earum repudiandae soluta.</p>
+                    <a href="#" class="button">View More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="banner-slide" style="background-image: url({{asset('images/art-botanical-cactus.jpg')}});">
+            <div class="container">
+                <div class="caption-text col-md-6">
+                    <h2>Living Room Plant</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui aliquid voluptates at, quam nam earum repudiandae soluta.</p>
+                    <a href="#" class="button">View More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+@endsection
+@section('main')
+
+        <div class="hero-area-wrapper d-none d-md-block">
+            <div class="container">
+                <div class="banner-slider owl-carousel">
+                    <div class="caption-text hero-area" style="background-image: url({{asset('images/Gnome-Garden-Plant-StatueGnome-Garden-Plant-Statuepng.png')}});">
+                        <div class=" col-md-8">
+                            <h2>Plants for Office Desk</h2>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui aliquid voluptates at, quam nam earum repudiandae soluta.</p>
+                            <a href="#" class="button">View More</a>
+                        </div>
+                    </div>
+
+                    <div class="caption-text hero-area" style="background-image: url({{asset('images/1.png')}});">
+                        <div class="col-md-8">
+                            <h2>Hanging Plants</h2>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui aliquid voluptates at, quam nam earum repudiandae soluta.</p>
+                            <a href="#" class="button">View More</a>
+                        </div>
+                    </div>
+
+                    <div class="caption-text hero-area" style="background-image: url({{asset('images/FAVPNG_flowerpot-pattern_0TB3MHGY.png')}});">
+                        <div class="col-md-8">
+                            <h2>Living Room Plant</h2>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui aliquid voluptates at, quam nam earum repudiandae soluta.</p>
+                            <a href="#" class="button">View More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-area-wrapper d-md-none">
+            <div class="container">
+                <div class="hero-area">
+                    <div class="caption-text col-md-8">
                         <h2>Plants for Office Desk</h2>
-                        <a href="#" class="button">View More</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="banner-slide" style="background-image: url({{asset('images/indoor-plants/dose-media.jpg')}});">
-                <div class="container">
-                    <div class="caption-text">
-                        <h2>Hanging Plants</h2>
-                        <a href="#" class="button">View More</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="banner-slide" style="background-image: url({{asset('images/art-botanical-cactus.jpg')}});">
-                <div class="container">
-                    <div class="caption-text">
-                        <h2>Living Room Plant</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui aliquid voluptates at, quam nam earum repudiandae soluta.</p>
                         <a href="#" class="button">View More</a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-@endsection
-@section('main')
+
         <!-- start Offers on Plants -->
         <section class="inner-wrapper offer-area-wrapper">
             <div class="offers-area container">
                 <h2>Offers on Plants</h2>
                 <div class="offers-slider-wrapper owl-carousel">
                     <div>
-                        <a href="offers.html" class="deals-card indoor-offer text-right" style="background-image: url({{asset('images/green-plant.jpg')}});">
+                        <a href="/offers" class="deals-card indoor-offer text-right" style="background-image: url({{asset('images/green-plant.jpg')}});">
                             <span class="discount-rate">40%</span>
                             <p>On Indoor Plants</p>
                         </a>
                     </div>
                     <div>
-                        <a href="offers.html" class="deals-card moneyplant-offer text-left" style="background-image: url({{asset('images/green-plant.jpg')}});">
+                        <a href="/offers" class="deals-card moneyplant-offer text-left" style="background-image: url({{asset('images/green-leaves.jpg')}});">
                             <span class="discount-rate">20%</span>
                             <p>On Money Plant</p>
                         </a>
                     </div>
                     <div>
-                        <a href="offers.html" class="deals-card bonsai-offer text-right" style="background-image: url({{asset('images/placement/bathroom/sarah-dorweiler.jpg')}});">
+                        <a href="/offers" class="deals-card bonsai-offer text-right" style="background-image: url({{asset('images/placement/bathroom/sarah-dorweiler.jpg')}});">
                             <span class="discount-rate">60%</span>
                             <p>On Bonsai Plant</p>
                         </a>
@@ -94,11 +141,11 @@
                         </div>
                         <div class="card-body plant_info">
                             <span class="tag">Indoor Plants</span>
-                            <h5 class="plant-name"><a href="product.html">Marisol Casben</a></h5>
+                            <h5 class="plant-name"><a href="product.html">kjdfksdjfkl skfjsdfkjs sdklflksdf</a></h5>
                             <input type="number" class="rating" value="3" data-readonly>
                         </div>
                         <div class="card-footer">
-                            <div class="cm-flex-center mb-3">
+                            <div class="cm-flex-center">
                                 <p class="plant-price">$65</p>
                                 <div>
                                     <span class="original-price">$80</span><span class="discount-rate">70% off</span>
@@ -127,7 +174,7 @@
                             <input type="number" class="rating" value="3" data-readonly>
                         </div>
                         <div class="card-footer">
-                            <div class="cm-flex-center mb-3">
+                            <div class="cm-flex-center">
                                 <p class="plant-price">$65</p>
                                 <div>
                                     <span class="original-price">$80</span><span class="discount-rate">70% off</span>
@@ -156,7 +203,7 @@
                             <input type="number" class="rating" value="3" data-readonly>
                         </div>
                         <div class="card-footer">
-                            <div class="cm-flex-center mb-3">
+                            <div class="cm-flex-center">
                                 <p class="plant-price">$65</p>
                                 <div>
                                     <span class="original-price">$80</span><span class="discount-rate">70% off</span>
@@ -185,7 +232,7 @@
                             <input type="number" class="rating" value="3" data-readonly>
                         </div>
                         <div class="card-footer">
-                            <div class="cm-flex-center mb-3">
+                            <div class="cm-flex-center">
                                 <p class="plant-price">$65</p>
                                 <div>
                                     <span class="original-price">$80</span><span class="discount-rate">70% off</span>
@@ -214,7 +261,7 @@
                             <input type="number" class="rating" value="3" data-readonly>
                         </div>
                         <div class="card-footer">
-                            <div class="cm-flex-center mb-3">
+                            <div class="cm-flex-center">
                                 <p class="plant-price">$65</p>
                                 <div>
                                     <span class="original-price">$80</span><span class="discount-rate">70% off</span>
@@ -224,16 +271,15 @@
                         </div>
                     </div>
 
-                </div>
+                    <div class="latest-plant last-card card">
+                        <a href="/all-plants" title='view more'>View More <span>Plants</span></a>
+                    </div>
 
-                <div class="text-center mt-3">
-                    <a href="all-plants.html" class="button">View More</a>
                 </div>
 
             </div>
         </section>
         <!-- end Latest Arrivals -->
-
 
         <!-- start deals of the day -->
         <section class="deals-wrapper inner-wrapper">
@@ -277,75 +323,6 @@
         </section>
         <!-- end deals of the day -->
 
-         <!-- no heading -->
-         <!-- <section class="hero-area-wrapper inner-wrapper d-none d-md-block">
-            <div class="hero-area container">
-                <h2>No Heading</h2>
-                <div class="hero-slider-wrapper owl-carousel">
-
-                    <div class="hero-slide">
-                        <div class="hero-img">
-                            <img src="assets/images/placement/office-desk/maarten-deckers.jpg" alt="plants">
-                        </div>
-                        <div class="hero-content">
-                            <div class="mb-2 mb-sm-5">
-                                <h2>Plants for Office Desk</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint perspiciatis explicabo est
-                                    ex ad corporis
-                                    laudantium
-                                    minus cumque ipsam odit, reprehenderit, porro dolorem quod non eaque doloremque vero
-                                    quaerat suscipit
-                                    iusto
-                                    illo. A
-                                    soluta quis, aperiam corporis ullam sint aliquid vitae quaerat repellat saepe.</p>
-                            </div>
-                            <a href="#" class="button">View More</a>
-                        </div>
-                    </div>
-
-                    <div class="hero-slide">
-                        <div class="hero-img">
-                            <img src="assets/images/placement/hanging/kevin-lessy.jpg" alt="plants">
-                        </div>
-                        <div class="hero-content">
-                            <div class="mb-2 mb-sm-5">
-                                <h2>Hanging Plants</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint perspiciatis explicabo est
-                                    ex ad corporis
-                                    laudantium
-                                    minus cumque ipsam odit, reprehenderit, porro dolorem quod non eaque doloremque vero
-                                    quaerat suscipit iusto
-                                    illo. A
-                                    soluta quis, aperiam corporis ullam sint aliquid vitae quaerat repellat saepe.</p>
-                            </div>
-                            <a href="#" class="button">View More</a>
-                        </div>
-                    </div>
-
-                    <div class="hero-slide">
-                        <div class="hero-img">
-                            <img src="assets/images/placement/living-room/iulia.jpg" alt="plants">
-                        </div>
-                        <div class="hero-content">
-                            <div class="mb-2 mb-sm-5">
-                                <h2>Living Room Plant</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint perspiciatis explicabo est
-                                    ex ad corporis
-                                    laudantium
-                                    minus cumque ipsam odit, reprehenderit, porro dolorem quod non eaque doloremque vero
-                                    quaerat suscipit
-                                    iusto illo. A
-                                    soluta quis, aperiam corporis ullam sint aliquid vitae quaerat repellat saepe.</p>
-                            </div>
-                            <a href="#" class="button">View More</a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section> -->
-        <!-- no heading -->
-
         <!-- start featured Plants -->
         <section class="featured-plant-wrapper inner-wrapper">
             <div class="container">
@@ -372,17 +349,13 @@
                             <input type="number" class="rating" value="3" data-readonly>
                         </div>
                         <div class="card-footer">
-                            <div class="cm-flex-center mb-3">
+                            <div class="cm-flex-center">
                                 <p class="plant-price">$65</p>
                                 <div>
                                     <span class="original-price">$80</span><span class="discount-rate">70% off</span>
                                 </div>
                             </div>
                             <a href="#" class="button secondary-btn w-100"><i class="fas fa-heart"></i> <span class="pl-2">Add to Wishlist</span></a>
-                            <!-- <div class="cm-flex-center">
-                                <a href="#" class="button secondary-border-btn w-50">Add to Wishlist</a>
-                                <a href="#" class="button secondary-btn w-50">Add to Cart</a>
-                            </div> -->
                         </div>
                     </div>
 
@@ -405,7 +378,7 @@
                             <input type="number" class="rating" value="3" data-readonly>
                         </div>
                         <div class="card-footer">
-                            <div class="cm-flex-center mb-3">
+                            <div class="cm-flex-center">
                                 <p class="plant-price">$65</p>
                                 <div>
                                     <span class="original-price">$80</span><span class="discount-rate">70% off</span>
@@ -434,7 +407,7 @@
                             <input type="number" class="rating" value="3" data-readonly>
                         </div>
                         <div class="card-footer">
-                            <div class="cm-flex-center mb-3">
+                            <div class="cm-flex-center">
                                 <p class="plant-price">$65</p>
                                 <div>
                                     <span class="original-price">$80</span><span class="discount-rate">70% off</span>
@@ -463,7 +436,7 @@
                             <input type="number" class="rating" value="3" data-readonly>
                         </div>
                         <div class="card-footer">
-                            <div class="cm-flex-center mb-3">
+                            <div class="cm-flex-center">
                                 <p class="plant-price">$65</p>
                                 <div>
                                     <span class="original-price">$80</span><span class="discount-rate">70% off</span>
@@ -492,7 +465,7 @@
                             <input type="number" class="rating" value="3" data-readonly>
                         </div>
                         <div class="card-footer">
-                            <div class="cm-flex-center mb-3">
+                            <div class="cm-flex-center">
                                 <p class="plant-price">$65</p>
                                 <div>
                                     <span class="original-price">$80</span><span class="discount-rate">70% off</span>
@@ -521,7 +494,7 @@
                             <input type="number" class="rating" value="3" data-readonly>
                         </div>
                         <div class="card-footer">
-                            <div class="cm-flex-center mb-3">
+                            <div class="cm-flex-center">
                                 <p class="plant-price">$65</p>
                                 <div>
                                     <span class="original-price">$80</span><span class="discount-rate">70% off</span>
@@ -531,10 +504,10 @@
                         </div>
                     </div>
 
-                </div>
+                    <div class="featured-plant last-card card">
+                        <a href="/all-pots" title='view more'>View More <span>Plants</span></a>
+                    </div>
 
-                <div class="text-center mt-3">
-                    <a href="all-plants.html" class="button">View More</a>
                 </div>
             </div>
         </section>
@@ -646,7 +619,7 @@
                     <div class="blog-post-wrapper col-md-4">
                         <div class="blog-post card">
                             <div class="featured-img card-image">
-                                <a href="blog_post.html" title="blog"><img src="assets/images/type/terrariums/scott-webb.jpg" alt="Featured Image"></a>
+                                <a href="blog_post.html" title="blog"><img src="{{asset('images/type/terrariums/scott-webb.jpg')}}" alt="Featured Image"></a>
                             </div>
                             <div class="blog-content card-body">
                                 <div class="tag">Terrariums</div>
@@ -665,7 +638,7 @@
                     <div class="blog-post-wrapper col-md-4">
                         <div class="blog-post card">
                             <div class="featured-img card-image">
-                                <a href="blog_post.html" title="blog"><img src="assets/images/type/terrariums/scott-webb.jpg" alt="Featured Image"></a>
+                                <a href="blog_post.html" title="blog"><img src="{{asset('images/type/terrariums/scott-webb.jpg')}}" alt="Featured Image"></a>
                             </div>
                             <div class="blog-content card-body">
                                 <div class="tag">Terrariums</div>
@@ -684,7 +657,7 @@
                     <div class="blog-post-wrapper col-md-4">
                         <div class="blog-post card">
                             <div class="featured-img card-image">
-                                <a href="blog_post.html" title="blog"><img src="assets/images/type/terrariums/scott-webb.jpg" alt="Featured Image"></a>
+                                <a href="blog_post.html" title="blog"><img src="{{asset('images/type/terrariums/scott-webb.jpg')}}" alt="Featured Image"></a>
                             </div>
                             <div class="blog-content card-body">
                                 <div class="tag">Terrariums</div>
@@ -706,25 +679,8 @@
         </section> -->
         <!-- end Blog -->
 
-        <!-- start newsletter -->
-        <section class="inner-wrapper">
-            <div class="container">
-                <h2>Subscribe to our Newslatter</h2>
-                <div class="w-75 m-auto w-sm-100">
-                    <form class="newsletter-form">
-                        <div class="form-group mb-0 d-flex">
-                            <label for="newslatter" class="sr-only">Newsletter</label>
-                            <input type="text" class="form-control" id="newslatter" placeholder="Your Email Address">
-                            <button class="button">Subscribe</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
-        <!-- end newsletter -->
-
         <!-- start features -->
-        <section class="light-bg">
+        <section class='inner-wrapper'>
             <div class="container">
                 <div class="row text-center feature-area-wrapper">
                     <div class="col-md-3 col-6 inner-wrapper">

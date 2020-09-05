@@ -8,12 +8,13 @@
 @endsection
 @section('breadcrumb')
 <nav aria-label="breadcrumb" class="breadcrumb-wrapper style-1">
-        <div class="container">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">FAQs</li>
-            </ol>
-        </div>
+    <div class="container">
+    <h2 class="title-page">FAQs</h2>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">FAQs</li>
+        </ol>
+    </div>
 </nav>
 @endsection
 @section('main')

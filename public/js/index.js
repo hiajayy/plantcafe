@@ -2,8 +2,8 @@ $(document).ready(function () {
 
     $('.plants-slider').owlCarousel({
         loop: false,
-        // nav:true,
-        dots: true,
+        nav:true,
+        dots: false,
         margin: 16,
         navText: ['<a class="left">❮</a>', '<a class="right">❯</a>'],
         responsiveClass: true,
