@@ -62,6 +62,9 @@
         </div>
     </div> --}}
 
+    
+
+
     <!-- start header -->
     @include('inc.header')
     <!-- end header -->
@@ -280,12 +283,3 @@
 
 </html>
 
-{{-- 
-rating js include
-all-pots
-all-plants
-offers
-product
-search --}}
-
-{{-- layout image problem because of body class --}}

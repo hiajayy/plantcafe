@@ -169,6 +169,52 @@ header {
     }
 }
 
+/* loader */
+.loader-ajax {
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    background: #ffffff;
+    min-height: 164px;
+    .outer-circle {
+        display: inline-block;
+        width: 64px;
+        height: 64px;
+        position: relative;
+        border: 5px solid transparent;
+        border-radius: 50%;
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            border-radius: 50%;
+            height: 100%;
+            width: 100%;
+            border: 8px solid;
+            border-color: transparent $primary_color;
+            animation: anim-rotate 3s infinite linear;
+        }
+        &::after {
+            border-color: $secondary_color transparent;
+            width: 60%;
+            height: 60%;
+            top: 11px;
+            left: 11px;
+        }
+    }
+
+    // .inner-circle {
+    //     width: 80px;
+    //     height: 80px;
+    //     /* left: 0; */
+    //     border: 11px solid;
+    //     border-color: transparent blue;
+    // }
+}
+
+// @keyframes
+
 /* =============== Footer =============== */
 footer {
     padding: 5rem 0 0;

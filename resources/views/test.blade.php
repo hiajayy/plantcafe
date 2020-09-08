@@ -1,134 +1,6 @@
-@extends('layouts.app')
-@section('title','Home(Testing) - Plant Cafe')
-@section('body-class','home-page')
-@section('js')
-    <script src="{{asset('js/ui.js')}}"></script>
-    <script src="{{asset('js/main.js')}}"></script>
-    <script src="{{asset('js/index.js')}}"></script>
-    <!-- owl carousel -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script src="https://use.fontawesome.com/5ac93d4ca8.js"></script>
-    <script src="{{asset('js/bootstrap4-rating-input.js')}}"></script>
-
-
-    <script>
-        
-        $.ajax({
-            url : '/home?latest',
-            method : 'get',
-            
-            success : function(response){
-                console.log(response);
-                {{-- let res = JSON.parse(response);
-                let plant = '<div class="container"><h2>Latest Arrivals</h2><div class="latest-plant-slider plants-slider owl-carousel">';
-                    res.forEach(function(item){
-                        plant += '<div class="latest-plant plant-card card"><div class="card-image"><a href="product.html"><img src="{{asset('images/indoor-plants/brina-blum.jpg')}}" alt="img" class="back-img"><img src="{{asset('images/product')}}/'+item.image_url+'" alt="img" class="front-img"></a><ul class="card-option"><li><a href="" class="button light-btn cart-btn" title="Add to Cart"><i class="fas fa-shopping-cart"></i> </a></li><li><a href="" class="button light-btn wishlist-btn" title="Add to Wishlist"><i class="fas fa-heart"></i> </a></li></ul></div><div class="card-body plant_info"><span class="tag">Indoor Plants</span><h5 class="plant-name"><a href="product.html">'+item.name+'</a></h5><input type="number" class="rating" value="3" data-readonly></div><div class="card-footer"><div class="cm-flex-center mb-3"><p class="plant-price">'+item.sp+'</p><div><span class="original-price">'+item.mrp+'</span><span class="discount-rate">'+item.discount+'% off</span></div></div><a href="#" class="button secondary-btn w-100"><i class="fas fa-heart"></i> <span class="pl-2">Add to Wishlist</span></a></div></div>';
-                        
-                    });
-                    plant += '</div><div class="text-center mt-3"><a href="all-plants.html" class="button">View More</a></div></div>' ;
-                    $('.latest-plant-wrapper').html(plant); --}}
-                    {{-- $('.latest-plant-wrapper').html(response); --}}
-                    $('.hero-area-wrapper').html(response);
-                    $('.plants-slider').owlCarousel({
-                        loop: false,
-                        nav:true,
-                        dots: false,
-                        margin: 16,
-                        navText: ['<a class="left">❮</a>', '<a class="right">❯</a>'],
-                        responsiveClass: true,
-                        responsive: {
-                            0: {
-                                items: 1
-                            },
-                            576: {
-                                items: 2
-                            },
-                            992: {
-                                items: 4
-                            }
-                        }
-                    })           
-            }
-        });
-        
-    </script>
-    {{-- <script>
-        
-        $.ajax({
-            url : '/home?featured',
-            method : 'get',
-            
-            success : function(response){
-                let res = JSON.parse(response);
-                let plant = '<div class="container"><h2>Featured Plants</h2><div class="featured-plant-slider plants-slider owl-carousel">';
-                    res.forEach(function(item){
-                        plant += '<div class="featured-plant plant-card card"><div class="card-image"><a href="product.html"><img src="{{asset('images/indoor-plants/brina-blum.jpg')}}" alt="img" class="back-img"><img src="{{asset('images/product')}}/'+item.image_url+'" alt="img" class="front-img"></a><ul class="card-option"><li><a href="" class="button light-btn cart-btn" title="Add to Cart"><i class="fas fa-shopping-cart"></i> </a></li><li><a href="" class="button light-btn wishlist-btn" title="Add to Wishlist"><i class="fas fa-heart"></i> </a></li></ul></div><div class="card-body plant_info"><span class="tag">Indoor Plants</span><h5 class="plant-name"><a href="product.html">'+item.name+'</a></h5><input type="number" class="rating" value="3" data-readonly></div><div class="card-footer"><div class="cm-flex-center mb-3"><p class="plant-price">'+item.sp+'</p><div><span class="original-price">'+item.mrp+'</span><span class="discount-rate">'+item.discount+'% off</span></div></div><a href="#" class="button secondary-btn w-100"><i class="fas fa-heart"></i> <span class="pl-2">Add to Wishlist</span></a></div></div>';
-                        
-                    });
-                    plant += '</div><div class="text-center mt-3"><a href="all-plants.html" class="button">View More</a></div></div>' ;
-                    $('.featured-plant-wrapper').html(plant);
-                    $('.plants-slider').owlCarousel({
-                        loop: false,
-                        nav:true,
-                        dots: false,
-                        margin: 16,
-                        navText: ['<a class="left">❮</a>', '<a class="right">❯</a>'],
-                        responsiveClass: true,
-                        responsive: {
-                            0: {
-                                items: 1
-                            },
-                            576: {
-                                items: 2
-                            },
-                            992: {
-                                items: 4
-                            }
-                        }
-                    })           
-                    
-            }
-        });
-        
-    </script> --}}
-@endsection
-{{-- @section('banner-area')
-@parent
-<div class="banner-area">
-        <div class="banner-slider owl-carousel">
-            <div class="banner-slide" style="background-image: url({{asset('images/placement/office-desk/scott-webb.jpg')}});">
-                <div class="container">
-                    <div class="caption-text">
-                        <h2>Plants for Office Desk</h2>
-                        <a href="#" class="button">View More</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="banner-slide" style="background-image: url({{asset('images/indoor-plants/dose-media.jpg')}});">
-                <div class="container">
-                    <div class="caption-text">
-                        <h2>Hanging Plants</h2>
-                        <a href="#" class="button">View More</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="banner-slide" style="background-image: url({{asset('images/art-botanical-cactus.jpg')}});">
-                <div class="container">
-                    <div class="caption-text">
-                        <h2>Living Room Plant</h2>
-                        <a href="#" class="button">View More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-@endsection --}}
-@section('main')
 
         <div class="hero-area-wrapper d-none d-md-block">
-        {{--     <div class="container">
+            <div class="container">
                 <div class="banner-slider owl-carousel">
                     <div class="caption-text hero-area" style="background-image: url({{asset('images/Gnome-Garden-Plant-StatueGnome-Garden-Plant-Statuepng.png')}});">
                         <div class=" col-md-8">
@@ -199,7 +71,7 @@
 
         <!-- start Latest Arrivals -->
         <section class="latest-plant-wrapper inner-wrapper">
-            {{-- <div class="container">
+            <div class="container">
                 <h2>Latest Arrivals</h2>
 
                 <div class="latest-plant-slider plants-slider owl-carousel">
@@ -355,7 +227,7 @@
 
                 </div>
 
-            </div> --}}
+            </div>
         </section>
         <!-- end Latest Arrivals -->
 
@@ -403,7 +275,7 @@
 
         <!-- start featured Plants -->
         <section class="featured-plant-wrapper inner-wrapper">
-            {{-- <div class="container">
+            <div class="container">
                 <h2>Featured Plants</h2>
 
                 <div class="featured-plant-slider plants-slider owl-carousel">
@@ -587,7 +459,7 @@
                     </div>
 
                 </div>
-            </div> --}}
+            </div>
         </section>
         <!-- end featured Plants -->
 
@@ -687,114 +559,3 @@
             </div>
         </section>
         <!-- end testimonial -->
-
-        <!-- start Blog -->
-        <!-- <section class="blog-wrapper inner-wrapper">
-            <div class="container">
-                <h2>Blog</h2>
-                <div class="row">
-
-                    <div class="blog-post-wrapper col-md-4">
-                        <div class="blog-post card">
-                            <div class="featured-img card-image">
-                                <a href="blog_post.html" title="blog"><img src="{{asset('images/type/terrariums/scott-webb.jpg')}}" alt="Featured Image"></a>
-                            </div>
-                            <div class="blog-content card-body">
-                                <div class="tag">Terrariums</div>
-                                <p class="blog-date">8th July 2020</p>
-                                <h4>
-                                    <a href="blog_post.html">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
-                                </h4>
-                                <div class="blog-body">
-                                    <p>Monocle ipsum dolor sit amet perfect discerning punctual Helsinki iconic Muji premium Baggu. Discerning sophisticated
-                                    extraordinary iconic. Fast Lane Baggu Swiss</p>
-                                    <a href="blog_post.html" title="read more" class="read-more">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="blog-post-wrapper col-md-4">
-                        <div class="blog-post card">
-                            <div class="featured-img card-image">
-                                <a href="blog_post.html" title="blog"><img src="{{asset('images/type/terrariums/scott-webb.jpg')}}" alt="Featured Image"></a>
-                            </div>
-                            <div class="blog-content card-body">
-                                <div class="tag">Terrariums</div>
-                                <p class="blog-date">8th July 2020</p>
-                                <h4>
-                                    <a href="blog_post.html">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
-                                </h4>
-                                <div class="blog-body">
-                                    <p>Monocle ipsum dolor sit amet perfect discerning punctual Helsinki iconic Muji premium Baggu. Discerning sophisticated
-                                    extraordinary iconic. Fast Lane Baggu Swiss</p>
-                                    <a href="blog_post.html" title="read more" class="read-more">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="blog-post-wrapper col-md-4">
-                        <div class="blog-post card">
-                            <div class="featured-img card-image">
-                                <a href="blog_post.html" title="blog"><img src="{{asset('images/type/terrariums/scott-webb.jpg')}}" alt="Featured Image"></a>
-                            </div>
-                            <div class="blog-content card-body">
-                                <div class="tag">Terrariums</div>
-                                <p class="blog-date">8th July 2020</p>
-                                <h4>
-                                    <a href="blog_post.html">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
-                                </h4>
-                                <div class="blog-body">
-                                    <p>Monocle ipsum dolor sit amet perfect discerning punctual Helsinki iconic Muji premium Baggu. Discerning sophisticated
-                                    extraordinary iconic. Fast Lane Baggu Swiss</p>
-                                    <a href="blog_post.html" title="read more" class="read-more">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section> -->
-        <!-- end Blog -->
-
-        <!-- start features -->
-        <section class='inner-wrapper'>
-            <div class="container">
-                <div class="row text-center feature-area-wrapper">
-                    <div class="col-md-3 col-6 inner-wrapper">
-                        <div class="feature-area">
-                            <span class="icon">
-                                <i class="fab fa-pagelines"></i>
-                            </span>
-                            <h5><span class="plant-count">1,000</span>+ Plants Shipped</h5>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-6 inner-wrapper">
-                        <div class="feature-area">
-                            <span class="icon">
-                                <i class="fas fa-truck"></i>
-                            </span>
-                            <h5 class="section-heading">Cash on Delivery</h5>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-6 inner-wrapper">
-                        <div class="feature-area">
-                            <span class="icon">
-                                <i class="fas fa-shipping-fast"></i>
-                            </span>
-                            <h5 class="section-heading">Fast Delivery</h5>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-6 inner-wrapper">
-                        <div class="feature-area">
-                            <span class="icon">
-                                <i class="fas fa-headset"></i>
-                            </span>
-                            <h5 class="section-heading">24x7 Support</h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- end features --> --}}
-@endsection

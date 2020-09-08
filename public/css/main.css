@@ -965,6 +965,47 @@ header .contact-info li a {
   padding: 1rem 0;
 }
 
+/* loader */
+
+.loader-ajax {
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+  background: #ffffff;
+  min-height: 164px;
+}
+
+.loader-ajax .outer-circle {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+  position: relative;
+  border: 5px solid transparent;
+  border-radius: 50%;
+}
+
+.loader-ajax .outer-circle::before,
+.loader-ajax .outer-circle::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  border: 8px solid;
+  border-color: transparent #587330;
+  -webkit-animation: anim-rotate 3s infinite linear;
+          animation: anim-rotate 3s infinite linear;
+}
+
+.loader-ajax .outer-circle::after {
+  border-color: #3d4c53 transparent;
+  width: 60%;
+  height: 60%;
+  top: 11px;
+  left: 11px;
+}
+
 /* =============== Footer =============== */
 
 footer {

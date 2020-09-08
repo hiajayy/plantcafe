@@ -1,8 +1,7 @@
-$(document).ready(function () {
-
-    $('.plants-slider').owlCarousel({
+$(document).ready(function() {
+    $(".plants-slider").owlCarousel({
         loop: false,
-        nav:true,
+        nav: true,
         dots: false,
         margin: 16,
         navText: ['<a class="left">❮</a>', '<a class="right">❯</a>'],
@@ -18,9 +17,9 @@ $(document).ready(function () {
                 items: 4
             }
         }
-    })
+    });
 
-    $('.testimonial_wrapper').owlCarousel({
+    $(".testimonial_wrapper").owlCarousel({
         loop: true,
         margin: 16,
         navText: ['<a class="left">❮</a>', '<a class="right">❯</a>'],
@@ -38,10 +37,10 @@ $(document).ready(function () {
                 items: 3
             }
         }
-    })
-    $('.hero-slider-wrapper').owlCarousel({
-        animateOut: 'fadeOut',
-        animateIn: 'fadeIn',
+    });
+    $(".hero-slider-wrapper").owlCarousel({
+        animateOut: "fadeOut",
+        animateIn: "fadeIn",
         loop: false,
         margin: 0,
         autoplay: false,
@@ -63,11 +62,11 @@ $(document).ready(function () {
                 nav: true
             }
         }
-    })
+    });
 
-    $('.offers-slider-wrapper').owlCarousel({
-        animateOut: 'fadeOut',
-        animateIn: 'fadeIn',
+    $(".offers-slider-wrapper").owlCarousel({
+        animateOut: "fadeOut",
+        animateIn: "fadeIn",
         loop: false,
         margin: 16,
         dots: true,
@@ -79,14 +78,12 @@ $(document).ready(function () {
                 items: 3
             }
         }
-    })
+    });
 
-    
-
-    var slidercontainer = $('.banner-slider');
+    var slidercontainer = $(".banner-slider");
     slidercontainer.owlCarousel({
-        animateOut: 'fadeOut',
-        animateIn: 'fadeIn',
+        animateOut: "fadeOut",
+        animateIn: "fadeIn",
         loop: true,
         margin: 0,
         autoplay: true,
@@ -95,14 +92,17 @@ $(document).ready(function () {
         items: 1,
         // nav: true,
         dots: true
-    })
+    });
 
-    slidercontainer.on("changed.owl.carousel", function(event){
+    slidercontainer.on("changed.owl.carousel", function(event) {
         // selecting the current active item
-        var item = event.item.index-2;
+        var item = event.item.index - 2;
         // first removing animation for all captions
-        $('.caption-text').removeClass('caption');
-        $('.owl-item').not('.cloned').eq(item).find('.caption-text').addClass('caption');
-    })
-
+        $(".caption-text").removeClass("caption");
+        $(".owl-item")
+            .not(".cloned")
+            .eq(item)
+            .find(".caption-text")
+            .addClass("caption");
+    });
 });

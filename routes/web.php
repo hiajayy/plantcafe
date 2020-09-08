@@ -89,6 +89,8 @@ Route::get('/add',function(){
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/demo', 'HomeController@ajax');
+
 
 
 //because all delay profile hide
